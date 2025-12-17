@@ -1,0 +1,999 @@
+Sažetak ključnih točaka, odluka i sljedećih koraka prema govornicima:
+
+Sažetak prema govornicima
+
+SPEAKER_5 (Ines)
+
+Uvod u predavanje o stablecoinima u Moneteri, muzeju novca Hrvatske narodne banke
+
+Najava dinamične rasprave o stablecoinima s Markom Škrebom i Nikolom Škorićem
+
+SPEAKER_2 (Božidar Pavlović)
+
+Pozdravlja prisutne i najavljuje dinamičnu, prijateljsku diskusiju o stablecoinima
+
+Napominje da stavovi izneseni nisu službeni stavovi institucija poput HNB-a ili ECB-a
+
+SPEAKER_1 (Nikola Škorić)
+
+Zahvaljuje Marku Škrebu na pozivu i objašnjava što su stablecoini - kriptovalute vezane za fiat valute poput dolara, eura, jena itd.
+
+Ističe da stablecoini predstavljaju veliku poslovnu priliku i transformativnu tehnologiju
+
+SPEAKER_3 (Marko Škreb)
+
+Razlikuje kriptoimovinu poput Bitcoina od stablecoina
+
+Navodi da stablecoini nemaju prihode poput kamata ili dividendi
+
+Ističe da stablecoini mogu služiti kao zaštita od inflacije u zemljama s visokom inflacijom
+
+Objašnjava da stablecoini omogućuju pristup kriptotržištu i brže, jeftinije međunarodne transakcije
+
+SPEAKER_2 (Božidar Pavlović)
+
+Navodi tri recentna događaja vezana uz stablecoine: konzorcij europskih banaka, prijedlog Bank of England-a, najava Klarne o izdavanju vlastitog stablecoina
+
+Traži od Marka Škreba objašnjenje razlike između fiducijarnog i fiat novca
+
+SPEAKER_3 (Marko Škreb)
+
+Objašnjava razliku između javnog novca koji izdaje središnja banka i privatnog novca u poslovnim bankama
+
+Ističe da je ključ financija povjerenje, što vidi kao osnovni rizik za stablecoine
+
+SPEAKER_2 (Božidar Pavlović)
+
+Pita Nikolu Škorića o use case-u za izdavanje stablecoina od strane banaka ili drugih subjekata
+
+SPEAKER_1 (Nikola Škorić)
+
+Navodi da stablecoini predstavljaju veliku poslovnu priliku zbog brzog rasta tržišta i nadmašivanja tradicionalnih platnih mreža
+
+Ističe da stablecoini omogućuju inovacije poput decentraliziranih financija, programibilnih plaćanja i 24/7 likvidnosti
+
+SPEAKER_2 (Božidar Pavlović)
+
+Traži od Marka Škreba objašnjenje razlike između tokenizirane imovine, stablecoina i kriptovaluta
+
+SPEAKER_3 (Marko Škreb)
+
+Objašnjava da su tokenizirani depoziti i digitalni euro dio pasive banaka i podložni regulaciji, dok stablecoini predstavljaju veći izazov u pogledu regulacije i rizika
+
+SPEAKER_1 (Nikola Škorić)
+
+Ističe da su izdavatelji stablecoina u Europi regulirane institucije za elektronički novac, s transparentnim poslovanjem i kolateralom
+
+Navodi da gubitak povjerenja u izdavatelja stablecoina ne bi uzrokovao sistemski rizik kao u bankarskom sustavu
+
+SPEAKER_2 (Božidar Pavlović)
+
+Naglašava potrebu razlikovanja reguliranih europskih stablecoina od nereguliranih poput Tethera
+
+SPEAKER_3 (Marko Škreb)
+
+Upozorava na rizike poput pranja novca i gubitka povjerenja kod stablecoina, unatoč njihovom potencijalu
+
+SPEAKER_1 (Nikola Škorić)
+
+Ističe da je kripto industrija u Europi regulirana u pogledu sprječavanja pranja novca
+
+Navodi primjere korupcije u tradicionalnom financijskom sustavu
+
+SPEAKER_2 (Božidar Pavlović)
+
+Citira Andráse Treichla koji upozorava na rizik dolarizacije europskog financijskog sustava dominacijom američkih stablecoina
+
+SPEAKER_3 (Marko Škreb)
+
+Slaže se s potrebom jačanja europske bankarske unije, tržišta kapitala i izdavanja europskih stablecoina kako bi se smanjio rizik
+
+SPEAKER_1 (Nikola Škorić)
+
+Predlaže poticanje izdavanja europskih stablecoina od strane europskih banaka kao konkurenciju američkim stablecoinima
+
+Ističe potencijal Europe u inovacijama i tehnologiji
+
+SPEAKER_4 (pitanje iz publike)
+
+Pita Marka Škreba što bi učinio kao guverner ECB-a da poveća udio europskih stablecoina naspram američkih
+
+SPEAKER_3 (Marko Škreb)
+
+Naglašava da cilj središnje banke nije zarada, već stabilnost, te da bi se savjetovao s ekspertima poput Nikole Škorića
+
+Spominje inicijative ECB-a poput Pontus sustava za povezivanje kriptovaluta i fiat novca
+
+SPEAKER_0 (Vedran Šošić, HNB)
+
+Objašnjava da stablecoini kao deponenti mogu ugroziti stabilnost bankarskog sustava zbog brzine povlačenja depozita
+
+Ističe da je problem u koncentraciji depozita kod stablecoina, a ne u samom propasti stablecoina
+
+SPEAKER_9 (pitanje iz publike)
+
+Pita Vedrana Šošića o opravdanosti tvrdnje da 350 milijuna eura europskih stablecoina predstavlja "dinamit" za bankarski sustav
+
+SPEAKER_7 (pitanje iz publike)
+
+Komentira da banke moraju ući na tržište stablecoina kako bi sačuvale svoju likvidnost i spriječile odljev depozita
+
+SPEAKER_6 (pitanje iz publike)
+
+Pita Marka Škreba o broju zaposlenih u središnjim bankama Kine, Indije i EU
+
+SPEAKER_3 (Marko Škreb)
+
+Navodi da Hrvatska narodna banka ima umjeren broj zaposlenih u usporedbi s drugim novim članicama EU
+
+SPEAKER_2 (Božidar Pavlović)
+
+Zaključuje panel naglašavajući potrebu za dijalogom i suradnjom između kripto industrije i bankarskog sektora
+
+================================================================================
+TRANSKRIPT
+================================================================================
+
+00:00:00,000 [SPEAKER_5]
+ Pozdrav svima i dobrodošli u Moneteru, muzej novca Hrvatske narodne banke. Za one koji nas ne poznaju, Monetera je muzej novca koji djeluje unutar Centra za posjetitelje Hrvatske narodne banke.
+
+00:00:18,900 [SPEAKER_5]
+ Imamo redovite edukativne programe, između ostalog i seriju predavanja Zašto guverneri ne spavaju, unutar koje smo danas.
+
+00:00:30,980 [SPEAKER_5]
+ Danas nam je užitak ugostiti predavanje o stablecoinima. Možda ćete se pitati, zašto pričamo o stablecoinima u središnjoj banci? Mislim da ćete dobiti odgovor danas.
+
+00:00:44,290 [SPEAKER_5]
+ Dinamičnu raspravu vodit ćete s našim gostima Markom Škrebom i Nikolom Škorićem i moderatorom Božidarom Pavlovićem. Za sva pitanja možete se javiti tijekom predavanja. Ja sam Ines iz Monetere i želim vam ugodno predavanje.
+
+00:01:07,660 [SPEAKER_2]
+ Pozdrav svima. Hvala Ines za uvod. Ja sam Božidar Pavlović, danas sam moderator. Uz mene su Marko Škreb i Nikola Škorić.
+
+00:01:22,820 [SPEAKER_2]
+ Za početak, dvije napomene. Prvo, stavovi koje ćemo danas iznijeti nisu službeni stavovi bilo koje institucije. Niti HNB-a, niti ECB-a, niti bilo koga drugoga. To su naši osobni stavovi.
+
+00:01:40,840 [SPEAKER_2]
+ Drugo, nadam se da će ovo biti dinamična, prijateljska diskusija. Imamo dvije različite perspektive - Marko dolazi iz svijeta središnjeg bankarstva, Nikola iz kripto industrije. Cilj je da razumijemo obje strane.
+
+00:02:03,130 [SPEAKER_2]
+ Nikola, možeš li nam za početak objasniti što su zapravo stablecoini?
+
+00:02:10,940 [SPEAKER_1]
+ Hvala Marku na pozivu. Stablecoini su kriptovalute koje su vezane za neku fiat valutu - dolar, euro, jen i tako dalje. Za razliku od Bitcoina koji oscilira u vrijednosti, stablecoini održavaju stabilnu vrijednost.
+
+00:02:33,020 [SPEAKER_1]
+ Za mene oni predstavljaju veliku poslovnu priliku i transformativnu tehnologiju. Ali o tome više kasnije.
+
+00:02:45,300 [SPEAKER_3]
+ Ako mogu dodati, bitno je razlikovati kriptoimovinu poput Bitcoina od stablecoina. Bitcoin je spekulativna imovina, stablecoini su nešto drugo.
+
+00:03:01,850 [SPEAKER_3]
+ Ono što je važno naglasiti - ni jedna ni druga ne nose nikakve prihode. Nema kamata, nema dividendi. Stablecoini se kupuju iz drugih razloga.
+
+00:03:18,470 [SPEAKER_3]
+ U zemljama s visokom inflacijom, stablecoini služe kao zaštita. Nekad su ljudi kupovali njemačke marke, danas kupuju stablecoine vezane za dolar.
+
+00:03:35,680 [SPEAKER_3]
+ Za firme, stablecoini omogućuju brže i jeftinije međunarodne transakcije. Umjesto 3-5 dana, transakcija se odvija u sekundama. Umjesto 3-5% provizije, plaćate cente.
+
+00:03:56,820 [SPEAKER_2]
+ Hvala Marko. Sad bih htio spomenuti tri recentna događaja.
+
+00:04:04,370 [SPEAKER_2]
+ Prvi - konzorcij devet europskih banaka najavio je izdavanje europskog stablecoina. Tu su Raiffeisen, ING, i druge velike banke.
+
+00:04:19,540 [SPEAKER_2]
+ Drugi - Bank of England objavio je dokument o regulaciji stablecoina. Kažu da je uloga središnje banke educirati o novim oblicima novca.
+
+00:04:36,290 [SPEAKER_2]
+ Treći - Klarna. Svi ste čuli za Klarnu, europski unicorn, buy now pay later. Njihov CEO je 2023. rekao da je Bitcoin digitalna Ponzi shema. Pred osam dana su najavili da izdaju vlastiti stablecoin.
+
+00:04:58,660 [SPEAKER_2]
+ Marko, možeš li nam objasniti razliku između fiducijarnog i fiat novca?
+
+00:05:07,340 [SPEAKER_2]
+ Dakle, Bank of England kaže ovako...
+
+00:05:16,470 [SPEAKER_2]
+ Znači, to je između ostalih uloga središnje banke da educira o novim formama, novim oblicima novca. U krajnjoj liniji to je zato i razlog za ovaj naš skup. Treća stvar koju bih htio spomenuti u kronologiji je Klarna. Svi ste čuli za Klarnu, dakle europski unicorn koji je nedavno izašao na američku burzu. Buy now, pay later.
+
+00:05:39,260 [SPEAKER_2]
+ odnosno, kako bi se kod nas reklo, prodaja na rate. Njihov CEO je 2023. rekao da je Bitcoin digitalna Ponzi shema. Pred osam dana su najavili da izdaju i vlastiti stablecoin. E sad, da bi sve to razumijeli i stavili u kontekst, Marko je nedavno u jednom razgovoru spomenuo jako, jako zanimljivu stvar. Razliku između fiducijarnog novca i fiat novca. Fiducijarni novac je novac od povjerenja kojeg ne izdaju centralne banke. Marko, daj nam ti to obrazloži da se ja ne zaletim previše.
+
+00:06:14,430 [SPEAKER_3]
+ Zapravo, do pred par godina se ta priča nije posebno razlikovala. Doći ću ja i na tvoje. Ono što je bitno danas razlikovati, to je jedan od razloga zbog čega i ECB, odnosno Europska središnja banka, sigurno ćemo govoriti o digitalnom euru. I razlikovanje javnog i privatnog novca. Javni novac je onaj novac koji izdaje središnja banka. Dakle, tehnički rečeno, to je pasiva središnje banke. Što je u pasivi središnje banke? Gotovina. Gotov novac i računi banaka. Ovo sve drugo što imate je novac koji je u poslovnim bankama, on je privatni novac. Dakle, javni novac nije identično, ali je vrlo blizak onom što se kaže fiat novac. Što znači fiat novac? Država je rekla to je zakonito sredstvo plaćanja. Fiducijarni novac je novac kome vjerujete da će se primati. Dakle, u tom smislu ključ svih financija je uvijek povjerenje. I ja ću kasnije o tome govoriti, tu vidim i osnovne rizike za stablecoine, da ne odemo predaleko.
+
+00:07:16,990 [SPEAKER_3]
+ a to je pitanje ključnog povjerenja.
+
+00:07:23,790 [SPEAKER_2]
+ U tom kontekstu, ovo što rade europske banke je interesantno jer će oni zapravo izdavati fiducijarni novac, ali pitanje koje se postavlja, gdje je tu use case? Nikola, tih banaka? Zašto one to? Gdje je generalno use case, odnosno nekakav razlog? Za generalnu ekonomiju, zašto bi netko izdao stablecoin?
+
+00:07:46,050 [SPEAKER_1]
+ Ok, znači pitaš me zašto bi banke izdavale stablecoin, a ne zašto bi ljudi koristili?
+
+00:07:50,150 [SPEAKER_2]
+ Ne, zašto bi banke ili bilo tko drugi, jer u Americi je slučaj da to nisu banke, zašto bi bilo tko drugi izdavao stablecoin?
+
+00:07:56,310 [SPEAKER_1]
+ Pa, stablecoin prometi su pred nekih mjesec dana na godišnjoj razini prešli iznos transakcija koje ima Visa, a u brzo će i Mastercard.
+
+00:08:09,810 [SPEAKER_1]
+ Zašto bi neko htio ući u tržište koje, kao što je gospodin Škreb rekao, Marko, ok, natjerao me da ga zovem Marko. Što je Marko malo prije rekao, tržište koje raste, znači raste nevjerojatnom brzinom. I već je prestiglo Visu.
+
+00:08:25,870 [SPEAKER_1]
+ Ok? Ne kao. Došlo je do razine Vise pa je sad na razini Vise, nego je prestiglo Visu i raste strelovito. Zašto bi neko htio ući u to tržište?
+
+00:08:36,530 [SPEAKER_1]
+ Povjeravate se što ćete. Ima jako puno novca tamo.
+
+00:08:41,480 [SPEAKER_1]
+ Opet, meni je nevjerojatno slušati Marka, jel? Očito je sad već svima da se radi o tehnologiji koja će izazvati revoluciju. Ono što treba reći je da još 2024. su savjetnici u ECB-u, Jürgen... kako se zove, rekao je da će kripto propasti, da to nema nikakvog use case-a, da to nema smisla i tak dalje, jel? Sad je narativ iz ECB-a, ljudi moramo početi paziti što se ovdje dešava. Stablecoin će u potpunosti transformirati financijski sustav.
+
+00:09:13,560 [SPEAKER_2]
+ Čuj, centralni bankari su ljudi.
+
+00:09:15,640 [SPEAKER_1]
+ Ok, ok, poanta je da je sad svima jasno. Nama je bilo jasno možda 2020. možda 2015. i tak dalje, možemo pričati o tome. Sad je već svima apsolutno jasno da se radi o transformativnoj tehnologiji. Koja ne da će nadići najveće platne mreže svjetske, nego ih sad već je nadišla i nastavlja svoj rast.
+
+00:09:38,910 [SPEAKER_1]
+ meteorski. Znači radi se prije svega, recimo da se samo radi o platnoj tehnologiji koja je jednaka onim tradicionalnima, radi se o ogromnoj poslovnoj prilici. A ne radi se samo o platnoj tehnologiji koja je pandant tradicionalnoj. Radi se o ogromnom području inovacije. Znači, ja sad da vam pričam kaj smo mi radili u ljeto 2020. u 4 ujutro čekajući stanoviti yield iz stanovitog kvazi stablecoina, čitajući njihove smart contracte i koliko smo novaca tam skurili, ne bi mi vjerovali. To je sve što tek sad dolazi na pozornicu. Neki dan sam slušao predavanje, to je workshop od DTCC-a, to je jedna od najvećih svjetskih technology providera za trgovanje vrijednosnicama. Znači, kogod je u burzovnom biznisu, svi su čuli za njih, svi koriste njihove usluge. Znači, oni su napravili workshop od sat i pol. Vi ste čudo! Znači, oni ne mogu vjerovat. Pazite, ja sam sad u Tokiju. Sad je dva popodne. Oni u New Yorku spavaju. I ja se sad ulogiram. I ja ovdje kliknem.
+
+00:10:47,140 [SPEAKER_1]
+ oni ne rade, a ja mogu sa njihovom likvidnošću raditi. Znači, nama je to ono kao, naravno, ja se ulogiram u subotu, u tri u jutro, dođem izvana, ulogiram se na burzu, prebacim novce 24-7, likvidnost beskonačna itd. Za naše pojmove. Oni sad svi tome čude. Znači, zašto bi banke ulazile u taj biznis? Zato što tek sad polako postaje
+
+00:11:08,570 [SPEAKER_1]
+ jasno da to nije cirkus, da mi nismo klauni, nego da se tu zbiljno nalazi jedna jako vrijedna tehnologija koja je već dostigla traditional playere. I nije niđe blizu da ostane.
+
+00:11:20,580 [SPEAKER_2]
+ Ako mogu uskočiti sad kao đavolji advokat, a siguran sam da bi Marko to htio.
+
+00:11:25,980 [SPEAKER_2]
+ Ja i dalje nisam čuo use case ovdje. Mislim, ja sam čuo od tebe sad hype. I kao, to je tehnologija koja je nadrasla Visu i imamo i Visu u publici, pa ih možemo pitati je li to stoji. Ali
+
+00:11:38,720 [SPEAKER_2]
+ Mislim, to je u neku ruku kao i AI hype. Svi se kunu u AI, svi se kunu u stablecoine, ali gdje je tu donešena nekakva ekstra vrijednost? Gdje je tu, na kraju pitanja si zapravo, na kraju odgovora si spomenuo 24 puta 7, fajn, jer Swift, ko će čekat settlement s bankom u Vijetnamu, to će trajati 100 godina. To je zapravo use case zamjene Swifta. Ili?
+
+00:12:00,720 [SPEAKER_1]
+ Znači, Western Union je
+
+00:12:04,560 [SPEAKER_1]
+ u određenom segmentu tržišta monopolist. Mi smo za jedan projekt koji radimo išli smo malo pričati sa stranim radnicima u Hrvatskoj. Postoji određena demografija, iz nekog razloga, starija gospoda iz Albanije i sa Kosova vole koristiti Western Union. Trebali bi imati puno jeftinije načine za prijenos sredstava. Western Union tu obire ogromne novce.
+
+00:12:26,000 [SPEAKER_1]
+ Western Union izdaje svoj stablecoin.
+
+00:12:29,010 [SPEAKER_1]
+ To je vijest od pred mjesec dana. Znači radi se o... Nema gospodina iz Western Uniona ovdje, ok, pa mogu reći. Znači, radi se o tehnološkom dinosauru koji je sve samo ne inovativna firma.
+
+00:12:44,250 [SPEAKER_1]
+ Tako da da, ok, prijenos sredstava je definitivno jedan use case. I to, samo da se tu zaustavimo, već smo rekli jako, jako puno. Jer radi se o okosnici našeg financijskog sustava koji funkcionira jako loše. Bila je potrebna odluka na unijskoj razini da bi se uveo SEPA instant.
+
+00:13:09,830 [SPEAKER_1]
+ Jel? Znači, vi imate sad u Europi eksploziju platnih novčanika. Zašto? Pa ne valjda zato što bankovna plaćanja rade super. Da vi možete iz svog internet bankarstva poslati novce, klik, klik, sken, bla, ode, ne bi ljudi išli koristiti, ne znam, Keks ili
+
+00:13:28,030 [SPEAKER_1]
+ ili Revolut, da uopće sad ne ulazimo, to, ne znam koliko vremena imamo, u pitanje Revoluta i tak dalje, jel? Okej, znači samo prijenos sredstava, to je svima, vjerujem, ovdje jasno, čemu služi i tak dalje.
+
+00:13:40,100 [SPEAKER_1]
+ DeFi.
+
+00:13:41,410 [SPEAKER_1]
+ Ja se nadam da više nije bezobrazno za izgovoriti u ovakvom auditoriju, ono pred par godina jest bilo, jer je bilo kao vi sad mislite decentralizirano reinventati ono money market.
+
+00:13:55,060 [SPEAKER_1]
+ Tržište kolaterala, overnight repos i tak dalje, to sve postoji, vi to su te neke vaše. Mislim, mi sami to zovemo Money Legos. Kockice gdje mi slažemo neke... Znači, to je područje... Dakle, tek mi, taj lica, ljudi iz DTCC-a koji se šokiraju što vi možete iz Japana u New York i obrnuto prenijeti sredstva sa jednim klikom, kad otkriju decentralizirane financije.
+
+00:14:21,039 [SPEAKER_2]
+ O tom se priča već dugo i vjerojatno će doći, ali da čujemo Markovo mišljenje. Ovom tehnologijom se uvode novi rizici, je li tako?
+
+00:14:28,650 [SPEAKER_3]
+ Da, da, ali prije nego što krenem na rizike, htio bih reći, pogotovo jer su tu i mediji. Nekoliko stvari koje se često zaboravljaju. Prvo, to sam već spomenuo, ja bih jako razlikovao kripto imovinu kao što je Bitcoin od stablecoina.
+
+00:14:45,400 [SPEAKER_3]
+ Poanta priče je da niti jedna niti druga ne nose nikakve prihode. Naglasit ću ponovo. Ne nose prihode. Ako ste kupili stablecoin, nećete dobiti nikakvu kamatu, dividendu, ništa.
+
+00:14:59,460 [SPEAKER_3]
+ Ako ste kupili Bitcoin, onda se možete nadati da vam je cijena narasla, pa kad ga prodate, da ćete zaraditi na kapitalnoj vrijednosti. Zašto je to bitno? Ono što govoriš use case. Prema tome, stablecoin se kupuje
+
+00:15:13,470 [SPEAKER_3]
+ ako se kupuje za individue iz nekoliko razloga. On je recimo dosta raširen, srećom to više kod nas nije slučaj, u zemljama koje imaju inflaciju. Jer se bježi kao hedge, kao što je nekad bila dolarizacija. Ovi stari, ne vidim baš puno, sjede glave. Nekad smo kupovali njemačke marke, pa eure kad su bile kune. Ali ovaj. Recimo u El Salvadoru. U zemljama gdje je visoka inflacija, dakle ide se u stablecoin da bi se zaštitili kao čuvar vrijednosti. Međutim, ono što ja vidim, dakle on nije, kaj bih rekao, ulaganje da vi... Kod nas nemate razloga zašto bi kupovali stablecoin koji je vezan za eure da očuvate vrijednost. Isto vam je. Ono što pruža je po meni ovo što je spomenuo
+
+00:16:02,100 [SPEAKER_3]
+ Nikola
+
+00:16:03,790 [SPEAKER_3]
+ Što on daje, prvo pristup u kriptovijet. Dakle, evo tu je čovjek koji vodi mjenjačnicu. Vi ne možete kupiti Bitcoin ako prije toga niste taj takozvani ramp-on ušli na to tržište. Obično ide preko stablecoina, onda iz stablecoina možete kupovati Bitcoine, kad izlazite iz fiat novca opet idete preko stablecoina. Dakle, to vam je pristup u kriptosvijet. Ako ne želite trgovati u kriptu, ne vidim puno razloga zašto bi išli u tu investiciju. Za firme se na nešto drugačije. Danas spomenuo si smart contracte, danas se firmama omogućuje kojima u prvom redu međunarodni platni promet, navest ću vam par brojki.
+
+00:16:49,270 [SPEAKER_3]
+ Nikola je spomenuo. Transakcije se mjere u sekundama. Čak i dijelovima sekunde, ovisi dal vam je to layer 1, layer 2, bla, bla. Ali poanta priče je da transakcija se odvija u sekundama, ne 3 do 5 dana kao što je bilo u bankama. Cijena.
+
+00:17:07,500 [SPEAKER_3]
+ U centima.
+
+00:17:09,320 [SPEAKER_3]
+ Čak ako se
+
+00:17:11,610 [SPEAKER_3]
+ Informacije koje sam imao, ako gledate taj da iz fiat novca, dakle recimo iz eura, idete u stablecoine, napravite transakciju, vratite se natrag u fiat, neće vas koštati preko jednog eura transakcija. Što je u odnosu na 3 do 5% nezamislivo, dakle brzina. I druga stvar je cijena. To su ogromne prednosti. I treća stvar koju ću reći kao use case koji se, ja ne znam koliko se koristi, tu su ljudi iz industrije, a to je te programirane platforme koje vam omogućuju da automatizirate plaćanje. Dakle, preko smart contracta, ako imate vama, vaši dobavljači, vi možete automatski oni vam pošalju fakturu preko smart contracta, vi im plaćate automatski, ne trebate imati 50 ljudi u računovodstvu da to obračunava. To su sve velike, velike stvari. Dakle, da ne pričam previše, to su sve koristi, a o rizicima kad dođem drugi put na red.
+
+00:18:07,400 [SPEAKER_1]
+ Ako mogu samo
+
+00:18:11,629 [SPEAKER_1]
+ malo proširenje, proširenje, jel? Rekao si da stablecoini nemaju povrat. To je tako isključivo zato što je to zakonski zabranjeno. Jel?
+
+00:18:22,690 [SPEAKER_3]
+ I u Americi i u Europi. I Genius Act i MiCA zabranjuju davanje kamata.
+
+00:18:29,510 [SPEAKER_1]
+ Stablecoini koji imaju yield postoje. Znači vi sad možete otići, kupit stablecoin, vi ga držite i njemu vrijednost raste. Dva, tri, četiri, pet, deset posto.
+
+00:18:41,310 [SPEAKER_2]
+ Daj nam to onda objasni, ako je logika stablecoina ta da on mora imat, kako da velim, utemeljenje u čvrstoj valuti, ili u zlatu, ili u dolarima, ili u eurima, ili u čemu god. Kako onda meni laiku, objasni kako onda moguće temeljem čega tu dolazi yield.
+
+00:18:57,010 [SPEAKER_1]
+ Ok, ajmo krenuti od yielda. Znači, recimo ja svoju ušteđevinu
+
+00:19:04,240 [SPEAKER_1]
+ ne držim na banci, nažalost, nego držim u stablecoinima u nečemu što mi zovemo vault. To je neki smart contract gdje sam ja deponirao svoje stablecoinove i oni meni, zadnji izračun zadnjeg dana dobio sam nekih 6,25%.
+
+00:19:20,880 [SPEAKER_1]
+ Što ti smart contracti rade sa mojom likvidnošću, pružaju dalje gdje je već potrebno za tradanje, ovisi u koji vault staviš, nekad za održavanje kolaterala nekog stablecoina recimo, ili kao likvidnost za decentralizirane burze kojima je potrebna umjesto market makera itd. Znači, u decentraliziranim financijama postoji cijeli niz procesa gdje je potrebna likvidnost. Ja tu likvidnost pružam. Ja u principu sa svojom štednjom sam postao liquidity provider. I dobivam 6,25%.
+
+00:19:49,510 [SPEAKER_2]
+ Znači na isti način kao što klasične standardne banke nude pasivnu kamatu.
+
+00:19:53,190 [SPEAKER_1]
+ Da, da. Samo što ja mogu u subotu u tri u jutro doći i kliknuti klik i sa tri klika ja sam položio taj svoj stablecoin u vault i mogu zaboraviti. I u bilo kojem trenutku, bez ročnosti, bez ičega, ja to mogu povući van. To je prva stvar. Druga stvar, stablecoini koji daju yield, naravno nisu stablecoini, ja sam upotrijebio tu riječ čisto za potrebe jednostavnijeg objašnjavanja. Radi se o tome da smart contracti, spomenuo sam već izraz Lego Money, jel? I programeri smo čudna vrsta. Mi gdje god vidimo neku priliku da nešto zamotamo u neki komad koda, da se nešto automatizira, onda mi to napravimo. Zašto bi ja morao uzeti svoje stablecoine i staviti ih u nekakav smart contract i onda tamo dobivati 6% i onda kad želim povući van, onda ja moram klik.
+
+00:20:45,720 [SPEAKER_1]
+ Idem napravit ćemo mi smart contract koji će to sve napraviti umjesto mene. Ja ću naprosto kupit onda, nazovimo to
+
+00:20:53,420 [SPEAKER_1]
+ kriptovaluta koja pruža yield, koja će u bazi imati stablecoin i koja će automatski, programabilno tražiti likvidnost i prebacivati se iz jednog contracta u drugi, ovisno o tome gdje se pruža najveća likvidnost. Takvi servisi postoje već godinama, to nije nešto što je nastalo jučer.
+
+00:21:10,230 [SPEAKER_1]
+ I takvi servisi su u Europi ilegalni. Zašto? Zato što su predobri. Ne slažem se, ali dobro. To bi se dalo debatirati. Ajmo to reformulirati. Znači mi ovdje sad ćemo pričati o rizicima stablecoinova.
+
+00:21:27,640 [SPEAKER_1]
+ I to u kontekstu, u trenutku kad je zabranjeno da pružaju yield.
+
+00:21:32,210 [SPEAKER_1]
+ Znači oni su puno manje privlačni nego recimo bankovni depozit koji će vam dati koliko već danas daje, nemam pojma, jel? Zato što nema tog yielda, jel? Zamislimo koliko bi tek bila privlačnost takvih kriptovaluta da nisu ilegalne. Ne znam jesam li sad odgovorio na pitanje.
+
+00:21:49,620 [SPEAKER_2]
+ Da, mislim da jesi, ali sigurno ćemo imati pitanje iz publike. Čim se tu spomene ilegalno, mislim tu moramo imati vrlo jasnu distancu.
+
+00:21:58,640 [SPEAKER_2]
+ Ono što je ilegalno je ilegalno, znači izvan zakona i uopće ne bi volio da tu pričamo o tim okvirima nego isključivo sadržimo ono legalno što je
+
+00:22:08,900 [SPEAKER_1]
+ Ok, mislim, pitao si da li postoje.
+
+00:22:10,340 [SPEAKER_2]
+ Pričat ćemo o potrebi za nadzorom i za regulacijom. Doći ćemo kasnije do toga. Ali mislim da je zapravo, dao si mi šlagvort, odnosno za sljedeće pitanje.
+
+00:22:25,060 [SPEAKER_2]
+ Kad se ne, stablecoini koji nose yield nisu stablecoini. Mislim da imamo mi svi u glavi malo zapravo o čem pričamo. Recimo, primjer. JP Morgan u Americi je svoje depozite pretvorio u tokene.
+
+00:22:41,960 [SPEAKER_2]
+ Da li je to stablecoin ili nije? Slično je napravila i Deutsche Bank u Europi, znači te stvari su dozvoljene. Imamo stablecoine USD denominirane, znači Tether, Circle kao dva najveća. Ali imamo i digitalni euro. Gdje je sad u cijelu tu priču, Marko, možda ti možeš reći. Koja je zapravo razlika tokenizirani depozit versus stablecoin versus kriptovaluta versus digitalni euro?
+
+00:23:07,580 [SPEAKER_3]
+ Ovako, digitalni euro je nešto što će do 29., pa ga nadam se, barem se ja nadam, ne bi sad to brkao. Poanta priče je da digitalizirani depozit, tokenizirani, ispričavam se depoziti su digitalni, tokenizirani depozit i dalje dio pasive banke i podložan kompletnoj regulaciji. Basel, EBA, lokalna zajednica, dakle on nije izvan sistema. To je cijeli problem po meni, veliki problem sa stablecoinima, neću govoriti o stablecoinima s yieldom, nego oni koji su čisti stablecoini, a to je pitanje njihove regulacije. Genius Act u Americi je to donekle regulirao, ali puno manje nego ja to čitam, MiCA. A sad kako god hoćete, to meni simpatično zvuči.
+
+00:24:00,780 [SPEAKER_2]
+ Možeš paziti samo na naglasak, da nije MiDiCA.
+
+00:24:03,720 [SPEAKER_3]
+ MiCA. Regulacija u Europi, ključni problem je taj kolateral.
+
+00:24:15,280 [SPEAKER_3]
+ Ja ću vam spomenut, spomenuo sam i za izjavu na televiziji, pred tri dana je S&P, rejting agencija, smanjila
+
+00:24:26,400 [SPEAKER_3]
+ ocjenu Tethera, najvećeg stablecoina u Americi, na najnižu moguću razinu, praktički na junk. Zašto? Zato što Tether ne objavljuje
+
+00:24:40,320 [SPEAKER_3]
+ auditirano, kako to veli, revidirano bilancu. Tether inače koji je, ponavljam, 180 milijardi dolara, je osnovan na Virgin Islandu, British Virgin Island. U siječnju su prešli u, vjerovali ili ne, El Salvador. I svi su došli tamo živjet, ekipa. El Salvador je donedavno bio zemlja koja je službeno Bitcoin smatrala svojim zakonitim sredstvom plaćanja, ali s obzirom na to da su zapravo bankrotirali, onda vam je u srpnju došao MMF i dao im je kredit od milijardu i pol dolara i rekao malo ohladite sa Bitcoinom, možete ga koristiti, ali ne može biti zakonsko sredstvo plaćanja i država ga mora maknuti. Dakle, koliko je sretno što je Tether došao u, kako se zove, El Salvador, to morate njih pitati. Međutim, to je ključna stvar, kako provjeriti vrijednost.
+
+00:25:36,880 [SPEAKER_3]
+ Circle je navodno puno stroži oko toga. I opet vraćam se na ono pitanje s početka, a to je pitanje povjerenja. Dokad ljudi vjeruju da postoji.
+
+00:25:48,870 [SPEAKER_3]
+ Oprosti još jednu minutu. Mi imamo u našem sustavu primjer ne stablecoina, nego kolaterala. To je Bosna i Hercegovina. Bosna i Hercegovina ima valutni odbor. To znači da je svaka njemačka, ispričavam se bosanska marka koja je izdana, ima pokriće u euru. Oni svaki kvartal moraju objaviti bilancu sa točnim sastavom svojih rezervi. Gdje se nalaze i koliko se nalaze, ne baš sve detalje. I znate koliko funkcionira? 30 godina, jer ljudi vjeruju. Jer podaci postoje. Ponavljam, Tether nije nikad objavio svoju revidiranu bilancu.
+
+00:26:27,680 [SPEAKER_3]
+ I mnogi od njih ne objavljuju. E sad. Ko voli, nek izvoli, ali zato je nedavno, oprosti, to moram spomenuti, Tether niko ne dira u regulaciji, dali su veliku donaciju da se sruši istočno krilo Bijele kuće, radi novog, ne zezam se, istinita informacija, da se napravi nova dvorana za
+
+00:26:51,200 [SPEAKER_3]
+ ples u Bijeloj kući. Dakle, poanta priče, kad me pitaš razliku, digitalizirani, tokenizirani depoziti su i dalje pasiva poslovnih banaka i mora se primijeniti kompletna regulacija, samo je omogućeno, detalje iskreno ne znam, ulazak
+
+00:27:12,280 [SPEAKER_3]
+ lakše se njima posluje, međutim stablecoini su nešto drugo. A kriptovalute bih, kripto imovinu bih u ovom času izdvojio iz priče.
+
+00:27:20,810 [SPEAKER_2]
+ Čisto da dotaknemo digitalni euro, gledam ga tamo na zidu, to će biti fiat novac.
+
+00:27:26,640 [SPEAKER_3]
+ Ovako.
+
+00:27:28,150 [SPEAKER_3]
+ Digitalni euro i zato se ECB, Europska središnja banka, nosi s ovom temom, digitalni euro bit će njihova pasiva. Dakle, to neće biti privatni novac, to će biti javni novac. I digitalni euro će imati vrijednost jer iza njega stoji središnja banka. Za razliku od stablecoina gdje iza njega stoji privatna firma koja možda da, možda ne objavljuje kolateral. To je cijela poanta.
+
+00:28:05,790 [SPEAKER_2]
+ Ok. Nikola, evo, Marko je spomenuo cijelu priču oko Tethera. Što ti kažeš na to? Tether je stvarno, mislim, rekao bih crna ovca industrije.
+
+00:28:21,300 [SPEAKER_1]
+ Da, da. Slažem se. Mislim, Tether ima jako puno problema. Ali isto tako Tether ima 180 milijardi dolara i nitko ih nije uspio srušiti. To nešto govori.
+
+00:28:38,950 [SPEAKER_1]
+ Međutim, ajmo se fokusirati na regulirane stablecoine. Jer to je ono o čemu bismo trebali pričati. U Europi, ako želite izdati stablecoin, morate imati licencu za elektronički novac. To je visoko regulirana licenca.
+
+00:28:58,420 [SPEAKER_1]
+ Hrvatska narodna banka regulira institucije za elektronički novac. Ima ih 7-8 u Hrvatskoj. Svaki euro koji je vani, postoji negdje. Nema netransparentnosti. Nema ne znamo gdje je novac.
+
+00:29:18,660 [SPEAKER_1]
+ Izdavači elektroničkog novca su visoko regulirane institucije koje su sastavni dio našeg financijskog sustava. A izdavači stablecoina su izdavači elektroničkog novca, točka. Znači, to je ista stvar.
+
+00:29:40,700 [SPEAKER_1]
+ Ako mi nismo sigurni u transparentnost izdavača elektroničkog novca, to znači da mi nismo sigurni u transparentnost osnovnog elementa našeg financijskog sustava, što je meni, evo ja moram priznati da je meni to jako teško za shvatiti.
+
+00:30:01,170 [SPEAKER_1]
+ Da je tolika netransparentnost u Europi. To je prva stvar. Druga stvar, kod gubitka povjerenja u EMI, što se dešava, ako uzmem Aircash čisto kao najbanalniji primjer, ovdje svi smo čuli, što se dešava ako vi izgubite sad svi ovdje povjerenje u Aircash? Vidili ste direktora, ne znam kaj vam se desilo, jel? I sad svi se želite maknuti sa Aircasha. Pa ništa, prebacite svoje novce sa Aircasha u svoju banku i nikom ništa. Zašto? Zato što on ima u kolateralu.
+
+00:30:13,710 [SPEAKER_1]
+ On je, to je regulirana institucija. Ne znam, malo mi sad moram priznati da mi je ovo malo neobičan argument, zato što ako stablecoin, ako izgubimo povjerenje u izdavača stablecoina, neće se desiti ništa, osim eventualno fire sale-a za koji imamo mehanizme.
+
+00:30:31,830 [SPEAKER_2]
+ Ali znaš u čem je tu problem, ako ja mogu dodat? Mislim da je problem u tome što, sad ću stati na stranu centralnih bankara, mislim da je problem u tome što
+
+00:30:40,820 [SPEAKER_2]
+ Vaš community
+
+00:30:42,780 [SPEAKER_2]
+ Malo brka tehnologiju, inovaciju koja dolazi iz Amerike, to je malo ono ezoterično. Pričamo čak o nekakvim stvarima koje su ono ilegalne. Mislim, to je za običnog smrtnika ezoterično. Pričamo o Amerikancima koji još koriste ček. Ne? Kad su čekovi kod nas otišli prije 30 godina. Ali.
+
+00:30:59,600 [SPEAKER_2]
+ Idemo se onda dogovoriti da li pričamo o stablecoinima koji su regulirani, koji su europski, ili pričamo o stablecoinima kao pojavi. Budućnost plaćanja ili uvod u novu krizu. Vjerujem da je potpuno drugačiji razgovor ako pričamo o stablecoinima koji su regulirani od strane, koji imaju EMI licencu u Europi, koji su tu legalni i normalan dio, i stablecoina generalno kao ono tehnologije koja, priča Tethera. Znači, da napravimo tu distinkciju. Ljudi su zbog toga, ja sam malo zbunjen jer stalno idete, ono, argumentirate iz jednog kuta, a rebalirate u drugi.
+
+00:31:34,770 [SPEAKER_1]
+ Ok. Znači, ja osobno trenutno, naša firma, radim na
+
+00:31:40,629 [SPEAKER_1]
+ projektu koji će biti baziran na stablecoinu.
+
+00:31:43,400 [SPEAKER_1]
+ Mi nećemo izabrati Tether. Zato što želimo raditi sa bankama, zato što želimo osigurati sigurnost svojim korisnicima itd.
+
+00:31:55,290 [SPEAKER_1]
+ Da ovaj razgovor vodimo pred godinu i pol dana,
+
+00:32:00,520 [SPEAKER_1]
+ moj odgovor na ovo bi bio čujte, ne znamo, vidjet ćemo kaj će se desiti. Danas imam puno bolji odgovor, a to je Tether je financirao izgradnju, to je rušenje istočnog krila Bijele kuće. Vjerujte mi, Tether će dobiti licencu kroz godinu dana. Ili će ih regulirati, ne Fed, ali američko državno tijelo koje će se pobrinuti da budu licencirani kao i drugi izdavači elektroničkog novca. Tether je jedna od najprofitabilnijih firmi na svijetu.
+
+00:32:33,280 [SPEAKER_1]
+ Ja nisam se htio sad dovesti ovdje u situaciju da branim Tether. Stvarno mi to nije namjera. Da ja vodim Tether, ja bi to drugačije. Apsolutno. Ali oni su se odlučili ići, jel se snima ovo? Oni su se odlučili kroz suradnju sa predsjednikom Trumpom kako bi legalizirali svoje poslovanje na određeni način. I ovako, mogu dati neku predikciju. Moja predikcija je da će oni kroz, ne znam, godinu dana, dvije godine biti regulirana institucija i cijeli ovaj razgovor više neće biti bitan. Jel? Da li Tether danas predstavlja ozbiljan rizik po financijski sustav, apsolutno, i zato europski financijski sustav, apsolutno, i zato nitko s njim u Europi ne radi.
+
+00:33:19,210 [SPEAKER_1]
+ I mislim da je to dobro.
+
+00:33:22,100 [SPEAKER_1]
+ Ne znam jesam li sad odgovorio.
+
+00:33:23,720 [SPEAKER_2]
+ Ne, apsolutno da. Mislim da je to sad
+
+00:33:26,470 [SPEAKER_2]
+ ponovo svima jasnije. Marko, hoćeš ti komentirati nešto?
+
+00:33:28,830 [SPEAKER_3]
+ Da, htio sam komentirati.
+
+00:33:32,540 [SPEAKER_3]
+ Nenužno podacima, ali
+
+00:33:35,780 [SPEAKER_3]
+ sa par činjenica ili vlastitog iskustva. Meni je drago Nikola da si ti tako siguran u to da su stablecoini sto posto pokriveni i da nema nikakvih rizika.
+
+00:33:48,340 [SPEAKER_1]
+ Ne, centralna banka je sigurna.
+
+00:33:49,980 [SPEAKER_3]
+ Molim.
+
+00:33:50,770 [SPEAKER_1]
+ Ne ja, regulator je siguran.
+
+00:33:54,160 [SPEAKER_3]
+ Evo. Ono što sam ja prošao da i kad je centralna banka regulirala banke u Hrvatskoj, nažalost imao sam na svojim rukama bankarsku krizu 1998. u Hrvatskoj koja je uzrokovana azijskom krizom. Doživio sam dotcom bubble koji je eksplodirao. Doživio sam probleme sa takozvanim Long Term Capital Management Fund, možda neki se sjećaju toga, koji su dva Nobelovca tvrdila da su pokrili sve rizike, dok nije ono što se veli, znate što mislim, udarilo u ventilator i onda su nastali problemi.
+
+00:34:28,250 [SPEAKER_3]
+ I naravno tu je pitanje 2007-2008. Veliki guru centralnog bankarstva Alan Greenspan je stalno tvrdio neće banke nešto raditi protiv svojih interesa. Međutim, moja poanta je, nije to direktan odgovor na tvoje, niti kontra, da u financijama rizici uvijek postoje.
+
+00:34:48,650 [SPEAKER_3]
+ Ne mogu biti, ja osobno nisam uvjeren, bez obzira na regulaciju, sjajnu HNB, guvernera, zamjenicu itd. da se negdje rizici ne zbivaju i kad se oni kumuliraju da se to dogodi. Dakle, ne sporim tvoje činjenice, nego samo želim reći
+
+00:35:07,110 [SPEAKER_3]
+ oprez, evo, samo. Slažemo se.
+
+00:35:12,470 [SPEAKER_1]
+ Apsolutno. Što više regulacije, to bolje.
+
+00:35:17,390 [SPEAKER_3]
+ Samo, nije uvijek više regulacije bolje. Ponekad je pametna regulacija bolja od više regulacije.
+
+00:35:25,680 [SPEAKER_1]
+ Ok, slažem se.
+
+00:35:28,340 [SPEAKER_2]
+ Ajmo na sljedeće pitanje. Marko, u jednom svom intervjuu si spomenuo rizik dolarizacije europskog financijskog sustava. Možeš li nam to objasniti?
+
+00:35:42,790 [SPEAKER_3]
+ Da. To nije moja originalna misao, to je misao Andráse Treichla, bivšeg CEO-a Erste banke. On je nedavno rekao, i ja se s njim apsolutno slažem, da ako Europa ne napravi svoj odgovor na američke stablecoine, da ćemo doživjeti dolarizaciju europskog financijskog sustava.
+
+00:36:08,450 [SPEAKER_3]
+ Pogledajte, 99% stablecoina je denominirano u dolarima. Manje od 1% u eurima. To je ogroman problem.
+
+00:36:21,890 [SPEAKER_3]
+ Ako ljudi u Europi počnu koristiti stablecoine denominirane u dolarima za plaćanja, mi gubimo monetarnu suverenost. ECB gubi kontrolu nad monetarnom politikom.
+
+00:36:38,520 [SPEAKER_3]
+ I zato se ja slažem s Nikolom da Europa mora reagirati. Ali ne tako da zabrani stablecoine, nego tako da stvori svoj odgovor.
+
+00:36:52,180 [SPEAKER_1]
+ Apsolutno se slažem. I zato mislim da bi europske banke trebale izdavati euro stablecoine. Zato konzorcij od devet banaka radi na tome.
+
+00:37:08,640 [SPEAKER_1]
+ Mi imamo sve preduvjete. Imamo regulaciju, imamo banke, imamo tehnologiju. Samo nam treba volja.
+
+00:37:19,850 [SPEAKER_1]
+ Samo jedna korekcija, da je Silicon Valley Bank propala, Circle bi izgubio 5% svoje vrijednosti.
+
+00:37:30,480 [SPEAKER_1]
+ Yoga, Fight Club, to sam htio.
+
+00:37:32,790 [SPEAKER_3]
+ Izgubili su 100% pokrića, to znam.
+
+00:37:35,030 [SPEAKER_1]
+ Zato što je bio vikend.
+
+00:37:37,900 [SPEAKER_1]
+ Zato što bankarski sustav iz nekog razloga ne zna micati novac. Od petka kad zatvore. Samo zato. Znači, kad je
+
+00:37:48,100 [SPEAKER_1]
+ kad je propala jedna banka na jedan vikend u kojoj su držali dio svojih depozita, došlo je do depega od koliko? 7%? Tako je. Manje od 7%, ja sam loše memorirao, ali da, tipa 3-4%, tak nešto. U ponedjeljak se sve izravnalo. Da je Fed pustio Silicon Valley Bank da propadne,
+
+00:38:14,100 [SPEAKER_1]
+ Circle bi izgubio, znači vlasnici Circle stablecoina ne bi izgubili ništa, zato što bi Circle to pokrio iz svojih profita. A pola američke startup industrije
+
+00:38:27,700 [SPEAKER_1]
+ bi umrlo.
+
+00:38:29,190 [SPEAKER_1]
+ I to je imalo čak i neke efekte, uključujući i neke hrvatske startupe.
+
+00:38:33,980 [SPEAKER_1]
+ Znači nije problem u stablecoinu. Problem je u banci.
+
+00:38:38,500 [SPEAKER_1]
+ Ok.
+
+00:38:40,319 [SPEAKER_1]
+ S druge strane, prema MiCA-i, najveći stablecoini moraju držati 60% svoje likvidnosti u bankovnim depozitima ili high liquidity assets.
+
+00:38:53,320 [SPEAKER_1]
+ Znači, visoko likvidnim assetima, 60%, drugih 40% mogu biti obveznice koje opet moraju biti izrazito likvidne.
+
+00:38:59,980 [SPEAKER_1]
+ Kad izgubite povjerenje u banku, banka mora držati kaj? 5-10% mora imati svoj pokrivač, banka krene propadati onda. Ok. Ali uzmimo fractional banking globalno. Stablecoini moraju biti pokriveni u potpunosti. 100%. Znači, ako se izgubi povjerenje u stablecoin koji je reguliran, onda će svi korisnici dobiti sav povrat natrag. Sve novce, nitko neće biti oštećen. Ok, imat ćemo problem sa padom yielda na obveznicama, dotaknut ćemo se toga. Ako banka propadne, onda imamo ozbiljni problema.
+
+00:39:34,880 [SPEAKER_1]
+ Svi ćemo se žaliti na banke i tako. Ako dođe do fire sale-a obveznica, to je nešto s čim imamo iskustva, nažalost, već desetak godina.
+
+00:39:45,880 [SPEAKER_1]
+ Znači, zadnjih 30 godina smo doživjeli fire sale obveznica ne znam koliko puta od Covida, od 2008. i tak dalje. Imamo libove, imamo stopove, imamo, kako se zovu, price fee swapove, nemam pojma, nisam centralni bankar, ali jako pametni ljudi već desetljećima rade na tome da se u slučaju fire sale-a obveznica rizik containira, da se stvore cushioni i tako dalje.
+
+00:40:21,370 [SPEAKER_1]
+ Stablecoini nisu najveći subjekt koji djeluje na tom tržištu. Čak i da preuzmu ne znam koliko posto platnog prometa, oni su tu jedan od igrača koji su sto posto pokriveni.
+
+00:40:36,630 [SPEAKER_1]
+ po regulaciji, jel? I ulaze u visoko regulirano, izrazito iskusno tržište koje je vidjelo svega.
+
+00:40:44,740 [SPEAKER_1]
+ Jel?
+
+00:40:46,390 [SPEAKER_1]
+ Da, svakako, rizik postoji.
+
+00:40:48,799 [SPEAKER_1]
+ Ajmo reći onda da zabranimo stablecoin u Europi.
+
+00:40:53,810 [SPEAKER_1]
+ Koji je rizik onda ulaska? Već sad imamo taj problem.
+
+00:40:58,210 [SPEAKER_1]
+ Da zbog pretjeranog reguliranja, zašto su oba dva izdavača stablecoina trenutno u Americi?
+
+00:41:06,850 [SPEAKER_1]
+ Zašto su oba dva card procesora američki? Gdje je Euroka?
+
+00:41:13,520 [SPEAKER_1]
+ Zašto nemamo više prodaje? Kome je prodana Europa? Amerikancima. A zašto?
+
+00:41:18,810 [SPEAKER_1]
+ Zašto je propao projekt Moneta? Libra? Diem?
+
+00:41:25,470 [SPEAKER_1]
+ Želimo li se izložiti tom riziku? Da li želimo za deset godina shvatiti da su američki stablecoini postali okosnica naše financijske industrije.
+
+00:41:36,920 [SPEAKER_1]
+ Digitalni euro dolazi u najboljem slučaju 2029. Ako ne bude nikakvih prepucavanja u trialogu. Mi još ne znamo što je digitalni euro i tako dalje. I recimo sad dođe digitalni euro 2029. Svijet se u potpunosti dolarizira u te četiri godine i onda prolazimo istu priču kao sa proizvodom.
+
+00:42:00,799 [SPEAKER_1]
+ Znači ovaj isti razgovor vodimo, samo što više nemamo nikakve šanse. Znači, to su dva rizika. Jedan rizik je fire sale obveznica
+
+00:42:09,930 [SPEAKER_1]
+ gdje imamo 30 godina iskustva kako containati taj rizik. Drugi je rizik da Europa, izrazit ću se optimistično,
+
+00:42:18,590 [SPEAKER_1]
+ zaostane.
+
+00:42:20,590 [SPEAKER_1]
+ Neću reći da je već zaostala u potpunosti.
+
+00:42:23,880 [SPEAKER_3]
+ Ovako moram reagirati u vezi banaka.
+
+00:42:28,730 [SPEAKER_3]
+ I to je velika razlika. Prvom redu, ne bi se složio da su stablecoini tako 100% garantirani i da je svaki dolar tamo gdje je. Recimo Tether, zašto je onda Tether downgradedan?
+
+00:42:43,160 [SPEAKER_1]
+ Regulirani stablecoin.
+
+00:42:44,790 [SPEAKER_3]
+ Regulirani, dobro, ok, ovo je neregulirano. Ne znam koliko im revizori gledaju u detalje, gdje drže kolateral. Tether, recimo, ima dio u zlatu, dio u rizičnoj aktivnosti. Znam, rekao si, regulirani. Ok.
+
+00:43:00,450 [SPEAKER_3]
+ To je po meni bitna razlika. Problem kod banaka je, a bankarski sustav je prošao nekoliko velikih kriza, posljednjom 2007. i 2008. Za razliku od nebankarskog financijskog sektora, u bankarstvu imate ono što se zove centralna banka koja može prvo dodati likvidnosti na tržištu koliko god treba, neograničeno. To se zove Open Market Operations, dakle ako fali likvidnosti mogu se prodavati i tako dalje, a za individualne institucije postoji zajmodavac u zadnjoj nuždi. Toga ovdje nema. Jednom kad se izgubi povjerenje, onda nemate taj koji će omogućiti sačuvati stabilnost cijelog sustava. Niti je taj sustav koliko ja znam
+
+00:43:47,330 [SPEAKER_3]
+ niti daje izvještaj i podatke koliko ih daju poslovne banke. Dakle, ja ću svoje pare radije držat, drago mi je da ti imaš svoj izbor, ja ću svoje pare radije držat u poslovnoj banci koja je regulirana u ovom sustavu i u Hrvatskoj i u Europskoj uniji nego što ću u ovim sistemima. Možda je to stvar mojih godina, ali imam iskustva u tom kontekstu. Evo.
+
+00:44:13,080 [SPEAKER_1]
+ Stablecoin je institucija za elektronički novac u Europi.
+
+00:44:18,790 [SPEAKER_1]
+ Znači, da bi izdali stablecoin u Europi, prema Markets and Cryptoassets regulativi, morate imati licencu za elektronički novac.
+
+00:44:30,060 [SPEAKER_1]
+ Koliko ih ima u Hrvatskoj takvih?
+
+00:44:31,760 [SPEAKER_1]
+ Sedam ili osam. Više ih ima u Hrvatskoj.
+
+00:44:35,000 [SPEAKER_2]
+ Ima ih dosta. Ima ih 7-8 čak u Hrvatskoj. I su regulirani kao institucije za izdavanje elektroničkog novca. Kad su krenuli bonovi mobitelski pa su se i Telekom i A1 registrirali.
+
+00:44:46,380 [SPEAKER_1]
+ Njih regulira Hrvatska narodna banka. Hrvatska narodna banka. Imaju licenciju, gleda njihovo poslovanje. Pazi, svaki euro koji je vani,
+
+00:44:58,970 [SPEAKER_1]
+ postoji nekakav euro negdje. Znači, tu nema netransparentnosti. Tu nema ne znamo di je novac. Izdavači
+
+00:45:08,440 [SPEAKER_1]
+ elektroničkog novca su visoko regulirane institucije koje su sastavni dio našeg financijskog sustava. A izdavači stablecoina
+
+00:45:19,110 [SPEAKER_1]
+ su izdavači elektroničkog novca, točka. Znači, to je ista stvar. Ako mi nismo sigurni u transparentnost izdavača elektroničkog novca, to znači da mi nismo sigurni u transparentnost osnovnog elementa našeg financijskog sustava, što je meni, evo ja moram priznat da je meni to jako teško za shvatiti.
+
+00:45:40,700 [SPEAKER_1]
+ Da je tolika netransparentnost
+
+00:45:45,170 [SPEAKER_1]
+ u Europi. To je prva stvar. Druga stvar, kod gubitka povjerenja u EMI, što se dešava, ako uzmem Aircash čisto kao najbanalniji primjer, ovdje svi smo čuli, što se dešava ako vi izgubite sad svi ovdje povjerenje u Aircash? Vidili ste direktora, ne znam kaj vam se desilo, jel? I sad svi se želite maknuti sa Aircasha. Pa ništ, prebačite svoje novce sa Aircasha u svoju banku i nikom ništa. Zašto? Zato što on ima u kolateralu.
+
+00:46:13,710 [SPEAKER_1]
+ On je, to je regulirana institucija. Ne znam, malo mi sad moram priznat da mi je ovo malo neobičan argument, zato što ako stablecoin, ako izgubimo povjerenje u izdavača stablecoina, neće se desiti ništa, osim eventualno fire sale-a za koji imamo mehanizme.
+
+00:46:31,830 [SPEAKER_2]
+ Ali znaš u čem je tu problem, ako ja mogu dodat? Mislim da je problem u tome što, sad ću stat na stranu centralnih bankara, mislim da je problem u tome što
+
+00:46:40,820 [SPEAKER_2]
+ vaš community
+
+00:46:42,780 [SPEAKER_2]
+ malo brka tehnologiju, inovaciju koja dolazi iz Amerike, to je malo ono ezoterično. Pričamo čak o nekakvim stvarima koje su ono ilegalne. Mislim, to je za običnog smrtnika ezoterično. Pričamo o Amerikancima koji još koriste ček. Ne? Kad su čekovi kod nas otišli prije 30 godina. Ali.
+
+00:46:59,600 [SPEAKER_2]
+ Idemo se onda dogovoriti da li pričamo o stablecoinima koji su regulirani, koji su europski, ili pričamo o stablecoinima kao pojavi. Budućnost plaćanja ili uvod u novu krizu. Vjerujem da je potpuno drugačiji razgovor ako pričamo o stablecoinima koji su regulirani od strane, koji imaju EMI licencu u Europi, koji su tu legalni i normalan dio, i stablecoina generalno kao ono tehnologije koja, priča Tethera. Znači, da napravimo tu distinkciju. Ljudi su zbog toga, ja sam malo zbunjen jer stalno idete, ono, argumentirate iz jednog kuta, a prebacujete se u drugi.
+
+00:47:34,770 [SPEAKER_1]
+ Ok. Znači, ja osobno trenutno, naša firma, radim na
+
+00:47:40,629 [SPEAKER_1]
+ projektu koji će biti baziran na stablecoinu.
+
+00:47:43,400 [SPEAKER_1]
+ Mi nećemo izabrati Tether. Zato što želimo raditi sa bankama, zato što želimo osigurati sigurnost svojim korisnicima itd.
+
+00:47:55,290 [SPEAKER_1]
+ Da ovaj razgovor vodimo pred godinu i pol dana,
+
+00:48:00,520 [SPEAKER_1]
+ moj odgovor na ovo bi bio čujte, ne znamo, vidjet ćemo kaj će se desiti. Danas imam puno bolji odgovor, a to je Tether je financirao izgradnju, to je rušenje istočnog krila Bijele kuće. Vjerujte mi, Tether će dobiti licencu kroz godinu dana. Ili će ih regulirati, ne Fed, ali američko državno tijelo koje će se pobrinuti da budu licencirani kao i drugi izdavači elektroničkog novca. Tether je jedna od najprofitabilnijih firmi na svijetu.
+
+00:48:33,280 [SPEAKER_1]
+ Ja nisam se htio sad dovesti ovdje u situaciju da branim Tether. Stvarno mi to nije namjera. Da ja vodim Tether, ja bi to drugačije. Apsolutno. Ali oni su se odlučili ići, jel se snima ovo? Oni su se odlučili kroz suradnju sa predsjednikom Trumpom kako bi legalizirali svoje poslovanje na određeni način. I ovako, mogu dati neku predikciju. Moja predikcija je da će oni kroz, ne znam, godinu dana, dvije godine biti regulirana institucija i cijeli ovaj razgovor više neće biti bitan. Jel? Da li Tether danas predstavlja ozbiljan rizik po financijski sustav, apsolutno, i zato nitko s njim u Europi ne radi, europski financijski sustav, apsolutno.
+
+00:49:19,210 [SPEAKER_1]
+ I mislim da je to dobro.
+
+00:49:22,100 [SPEAKER_1]
+ Ne znam jesam li sad odgovorio.
+
+00:49:23,720 [SPEAKER_2]
+ Ne, apsolutno da. Mislim da je to sad
+
+00:49:26,470 [SPEAKER_2]
+ ponovo svima jasnije. Marko, hoćeš ti komentirati nešto?
+
+00:49:28,830 [SPEAKER_3]
+ Da, htio sam komentirati.
+
+00:49:32,540 [SPEAKER_3]
+ Nenužno podacima, ali
+
+00:49:35,780 [SPEAKER_3]
+ sa par činjenica ili vlastitog iskustva. Meni je drago Nikola da si ti tako siguran u to da su stablecoini sto posto pokriveni i da nema nikakvih rizika.
+
+00:49:48,340 [SPEAKER_1]
+ Ne, centralna banka je sigurna.
+
+00:49:49,980 [SPEAKER_3]
+ Molim.
+
+00:49:50,770 [SPEAKER_1]
+ Ne ja, regulator je siguran.
+
+00:49:54,160 [SPEAKER_3]
+ Evo. Ono što sam ja prošao da i kad je centralna banka regulirala banke u Hrvatskoj, nažalost imao sam na svojim rukama bankarsku krizu 1998. u Hrvatskoj koja je uzrokovana azijskom krizom. Doživio sam dotcom bubble koji je eksplodirao. Doživio sam probleme sa takozvanim Long Term Capital Management Fund, možda neki se sjećaju toga, koji su dva Nobelovca tvrdila da su pokrili sve rizike, dok nije ono što se veli, znate što mislim, udarilo u ventilator i onda su nastali problemi.
+
+00:50:28,250 [SPEAKER_3]
+ I naravno tu je pitanje 2007-2008. Veliki guru centralnog bankarstva Alan Greenspan je stalno tvrdio neće banke nešto raditi protiv svojih interesa. Međutim, moja poanta je, nije to direktan odgovor na tvoje, niti kontra, da u financijama rizici uvijek postoje.
+
+00:50:48,650 [SPEAKER_3]
+ Ne mogu biti, ja osobno nisam uvjeren, bez obzira na regulaciju, sjajnu HNB, guvernera, zamjenicu itd. da se negdje rizici ne zbivaju i kad se oni kumuliraju da se to dogodi. Dakle, ne sporim tvoje činjenice, nego samo želim reći
+
+00:51:07,110 [SPEAKER_3]
+ oprez, evo, samo. Slažemo se.
+
+00:51:54,220 [SPEAKER_3]
+ Apsolutno slažem se s time. U Europi postoje dva velika izvještaja, Letta izvještaj i nakon toga Draghi izvještaj koji mnogi citiraju, koji upravo to govore. Recimo, bilo je mnogo napada kad je administracija predsjednika Trumpa uvela carine. Onda je Mario Draghi koji je bio bivši predsjednik ECB-a rekao pa vi unutar Europske unije imate puno veće zapreke trgovini nego što će vam Trump staviti. Rješavajte svoje probleme unutar kuće.
+
+00:52:24,480 [SPEAKER_3]
+ Mislim da je put, koliko god suverenisti to ne vole, u jačanju europske, ispričavam se, bankarske unije, osiguranje depozita je problem jer nije unificirano, stvaranju tržišta kapitala i u tom smjeru. Potpuno se slažem.
+
+00:52:41,440 [SPEAKER_1]
+ Ja bi još dodao stvaranju europske stablecoin industrije. Pitao si me zašto bi neko htio ući u stablecoin biznis. Ono što me nisi pitao je gdje su glavni use case-ovi i tako dalje. Mislim da neću sad ulaziti u detalje, ali onda postoji cijeli tu niz use case-ova i umjesto da se borimo protiv američkih stablecoina,
+
+00:53:04,250 [SPEAKER_1]
+ mislim da trebamo gurati europske stablecoine. Zašto svaka europska banka ne bi izdala svoju stablecoin valutu? Mislim, pred 20 godina su bili užasni otpori prema bankomatima, ne malo više od 20 godina.
+
+00:53:18,090 [SPEAKER_1]
+ Ovo je
+
+00:53:21,110 [SPEAKER_1]
+ SEPA instant, ogroman otpor europskih banaka. Ovdje sad otpor uglavnom dolazi iz ECB, ali tu je ECB u principu sad po prvi put ECB postaje maltene poslovna banka sa projektom digitalnog eura koji nose. Tako da sad je to konkurencija ECB-u. I sad se tu opet pojavljuje taj sukob. Mislim da umjesto da probamo po n-ti put
+
+00:53:46,790 [SPEAKER_1]
+ zaustaviti nekakav progres, mislim da treba reći, okej, mi to možemo bolje. Napravio bi jednu paralelu sa AI.
+
+00:53:54,720 [SPEAKER_1]
+ Najveće AI firme su u SAD-u. Najveći AI research instituti su u Europi. Mi imamo brutalne ljude ovdje. U Hrvatskoj imamo ne znam koliko unicorna po glavi stanovnika, što je daleko iznad prosjeka. Imamo povijest inovacija. Imamo zlatne medalje na matematičkim i na informatičkim olimpijadama. Imamo povijest
+
+00:54:28,790 [SPEAKER_1]
+ inoviranja i tak dalje, da sad ne ulazimo dalje, Tesla bio Hrvat il Srbin, imamo ogroman potencijal ovdje. Zašto ne izađemo na otvoreno tržište
+
+00:54:41,940 [SPEAKER_1]
+ i porazimo
+
+00:54:43,540 [SPEAKER_1]
+ Amerikance.
+
+00:54:45,330 [SPEAKER_1]
+ Ovdje, sa našim firepowerom koji imamo, sa ljudima koje imamo, sa kapitalom koji imamo, sa iskustvom koje imamo. Dao? Tako da ja bih se nadovezao apsolutno jačanje europskog bankarskog sustava. Jačanje europskog kriptosustava i suradnja ta dva. Zato što nismo ni krenuli, pričamo o tome da sad stablecoini su prešli Visu, sve je fajn, ali to je industrija koja do pred godinu dana je bila prosta riječ u bankarskim krugovima. Što će se desiti kad nas tu puste, jedva smo se počeli brijati i češljati i tako dalje, još bili smo dečki s ulice pred par godina, što će se desiti kad banke i ta naša industrija zajedno upregnu. A mislim da imamo tu sad veliku, veliku priliku.
+
+00:55:38,230 [SPEAKER_2]
+ Ovo je sjajna poruka za kraj i to je upravo tako kako sam htio završiti ovaj panel. Molim vas pozdravite paneliste toplim pljeskom.
+
+00:55:51,450 [SPEAKER_2]
+ I ako se slažete, ako se vi slažete prije svega, da pustimo par pitanja, sigurno ih ima, pa evo, ako netko želi postaviti pitanje našim panelistima, slobodno.
+
+00:56:07,169 [SPEAKER_4]
+ Evo, poštovanje. Jesam, Vlado Šljivar. Jedna mala opservacija.
+
+00:56:17,190 [SPEAKER_4]
+ Hvala ti, Nikola.
+
+00:56:18,720 [SPEAKER_4]
+ Na dopuštenju.
+
+00:56:20,240 [SPEAKER_4]
+ Ovo je jedna mala sama opservacija i jedno pitanje. Pratim kriptoindustriju već desetak godina i znači
+
+00:56:28,590 [SPEAKER_4]
+ Tether.
+
+00:56:29,960 [SPEAKER_4]
+ Mislim, market će odrediti da li će on puknuti. To je nešto što ne određujemo mi, niti ne određuje centralna banka nikome nepotrebna. To kad se dogodi, to će market odrediti. Izgubit će peg. Tako da što se tiče onoga da mi diskutiramo o Tetheru. 2015. kad pratim kripto je poznata ta floskula, a to je Tether FUD. Kao, sad će Tether puknuti. Dakle, to ne postoji. Ali pitanje za gospodina Škreba je sljedeće. Sutra se probudite i vi ste slučajnim odabirom postali guverner ECB-a.
+
+00:57:06,220 [SPEAKER_4]
+ I imate pored sebe ovako jednog krasnog mladića kao što je Nikola Škorić i tehnologiju koju on posjeduje i zna. I imate ovu informaciju i dalje u glavi da je 99% dolarskih
+
+00:57:21,479 [SPEAKER_4]
+ stablecoina izdano, a 0,1% euro stablecoina izdano. I imate svoje bogato i prekrasno iskustvo u djelovanju u državi u nastajanju.
+
+00:57:37,310 [SPEAKER_4]
+ I pitanje za sve nas koji smo iz kriptoindustrije je zapravo, što biste vi napravili da podignete tih 0,1% na 2, 3, 7, 12, 17%. To je moje pitanje. Jer mislim da mi nemamo znanja o tome. Jer ono što bi ja napravio je kao ECB došao bi, otvorio bi adresu i naprintao bi dovoljno da jednostavno ih ima. To ne ide tako. Vi znate otprilike kako bi to možda moglo ići, pa dajte nam probajte odgovor na to pitanje ako ste vi guverner sa ovim tehnologom pored vas kojeg imate. Kako biste vi povećali sa 0,1% na 2%?
+
+00:58:18,280 [SPEAKER_4]
+ Novčanu masu stablecoina eura.
+
+00:58:23,340 [SPEAKER_4]
+ Zbog yielda. Zato što će zaraditi više novca.
+
+00:58:31,020 [SPEAKER_4]
+ Pa gledajte, da stablecoini koji su američki koji dolaze, oni rade samo kolonizaciju koju već gledamo stotinama godina da se to događa. Znači, okej, onda odgovor je borba protiv kolonizacije, odgovor je yield koji se može zaraditi kroz taj novac ili tako dalje. Znači u biti pitanje, može biti i teoretsko pitanje, ne mora biti zašto razlog.
+
+00:58:54,530 [SPEAKER_3]
+ Mora biti zašto u ovom smislu. Hvala na pitanju. Prvom redu odabir ne ide slučajno za predsjednika Europske središnje banke, institucija je, ja zapravo kupujem vrijeme da smislim neki odgovor pametan vama, pa vam pričam da postoji izvršni odbor, postoji i tako dalje, naš guverner Boris je tamo vrlo aktivan i jako smo svi ponosni na to. Mislim da sjajan posao radi, radi u ECB-u. Ono što bih ja zapravo rekao je
+
+00:59:26,670 [SPEAKER_3]
+ kad govorite o yieldu, što se tiče središnjih banaka, po meni njihova osnovna zadaća je čuvati stabilnost, a ne zarađivati novce. Recimo, govorimo, bilo je puno pitanja i ja sad možda otvaram bolne teme. Zašto je HNB prodao zlato? Nisam ja bio guverner, a cijena je narasla, cijena je mogla pasti. Češka je nedavno, češka centralna banka i njihov guverner su krenuli u bitcoine i tako dalje. Po meni to su pogrešni signali. Dakle, ponavljam, osnovna zadaća središnje banke je da nadzire i osigurava u prvom redu stabilnost cijena, a u drugom redu stabilnost financijskih sustava.
+
+01:00:09,839 [SPEAKER_3]
+ Dakle, ono što mislim što bi ja napravio u takvoj situaciji, ne bi mi cilj bio povećat udio. Osim toga, možda da još kažem jednu informaciju i ako se izlažem. Nemojte mi ništa pitati jer ne znam detalje, možda Nikola zna. Ono što sam našao Europa radi napore prema kriptu. Postoji sustav Pontus. Ne znam da li ste čuli za Pontus. Pontus vam omogućava, to je kao svojevrsni interfejs između kripta. Dakle, nije to stablecoin i token, a drugi je API. API koji će biti napredniji, koji će omogućiti između kriptovalute i fiat novca, dakle poravnanja glatko kao da je stablecoin. Dakle, nije tokenizirana imovina, ne može se koristiti stvari, dakle tu će se omogućiti brže transakcije. Pontus navodno već funkcionira. Ne znam, Sandra, imaš informacije? API će biti uskoro. Dakle, ono što bi sigurno napravio je da bi pozvao ljude ko Nikola i ostale i savjetovao se s njima. Ali u funkciji statuta onog što treba raditi središnja banka, a to je po meni čuvati stabilnost, a ne nužno zarađivati novce. Evo.
+
+01:01:19,580 [SPEAKER_3]
+ Toliko s moje strane.
+
+01:01:25,000 [SPEAKER_2]
+ Dolje, niže.
+
+01:01:30,300 [SPEAKER_0]
+ Hvala. Znači, ovako dosta ste površno prešli preko. Prvo, samo jedan ispravak, pokriće u banci nije 5% ili 8% ili 10%, nego 100% plus taj postotak. Znači nije pokriće 100%. Evo je sto plus kapital. Tako da pokriće je u likvidnom kolateralu, on u kapitalu, vlastitom kapitalu, ide povrh.
+
+01:01:52,010 [SPEAKER_0]
+ Znači, povrh za sve obveze ima kompletno pokriće, plus još povrh tog kompletnog pokrića ima i dodatno kapital, dodatni sloj. I čim uđe u taj kapital, regulator zatvara, tako da
+
+01:02:05,480 [SPEAKER_0]
+ ne bi došla banka u situaciju da nema 100% pokrića. Naravno, nekad se dogodi da se ne da. Problem je procijeniti svu imovinu banke u realnom vremenu. Ali pokriće bi trebalo biti 100% plus kapitalnih zaključaka cijelo vrijeme. Drugo, dosta ste površno prošli, prešli preko propasti SVB-a. Zašto je ovdje propalo? Prvo, oko imovine nešto, nekoliko riječi. Ona je ulagala u državne obveznice. Što je tipična imovina koju drži nekakav stablecoin. Nisu bile nekakva rizična ulaganja koja su propala, pa je onda banka zbog toga propala. Međutim, i te obveznice osciliraju u vrijednosti. Kako se kamatne stope, kako se prinosi mijenjaju, cijena obveznicama raste ili pada, ona je kupila obveznicu kad su prinosi bili niski.
+
+01:02:50,470 [SPEAKER_0]
+ Primjernosti su najrasnije, cijene obveznica su se smanjivale. E sad, da depoziti nisu nestali, da su oni mogli ubirati nekakvu kamatu na te obveznice da su depoziti ostali u banci, možda bi banka i preživjela. Međutim, banka je imala u deponentima jako puno onih koji vole cijeli depozit prebaciti u tri sata u noći u sekundi i doživjela se navala na banku kakva se nikad u povijesti nije dogodila. I nijedna banka, ja vam garantiram da se dogodi takva navala na bilo koju banku u svijetu, svaka banka bi propala. Na početku je gospodin moderator rekao da
+
+01:03:33,180 [SPEAKER_0]
+ Europska središnja banka je primijetila stablecoin. Što se događa s tim stablecoinima? Znači, stablecoin ne drži samo obveznice, nego drže i depozite kod banaka. I sad imate situaciju da vam se depoziti koncentriraju. Znači, umjesto puno malih, sporih, inertnih deponenata, imate manji broj velikih deponenata koji na svaki šušanj trče i prebacuju novce iz banke u neku drugu banku. I to je nešto što se stavlja praktički dinamit u temelje bankovnog sustava.
+
+01:04:08,230 [SPEAKER_0]
+ Dakle, evo, to je moja procjena, što se događa.
+
+01:04:13,530 [SPEAKER_0]
+ Zapravo dijelim. To je ono što ECB neće koristiti takve živopisne opise kao ja, ali ja sam htio dočarati slikovito što se događa. Znači banke imaju, rade na toj ročnoj transformaciji, imaju nelikvidnu imovinu, imaju relativno obveze koje su kraćeg dospijeća, koje su likvidne i koje sad s ovim deponentima, stablecoinima, postaju hiperlikvidne, koje mogu nestati tom brzinom da centralna banka ne može proizvesti dovoljno likvidnosti, čak i koja ima neograničeni izvor likvidnosti, odnosno banka nema dovoljno kolaterala na koji može uzeti likvidnost od centralne banke. Tako da to je ono što se događa i to je razlog. Znači nije čak i problem toliko u samim stablecoinima i propasti stablecoina. Problem je u tome što stablecoini kao deponenti, o šteti koju izdavači stablecoina kao deponenti mogu napraviti bankarskom sektoru. Evo, to je ono što sam htio. Nešto sam skrivao, skenirao te pažnje.
+
+01:05:13,610 [SPEAKER_3]
+ Vedran Šošić, glavni ekonomist iz Hrvatske narodne banke, za one koji ne znaju. Kad se nije predstavljao.
+
+01:05:25,520 [SPEAKER_1]
+ Ako mogu samo postaviti.
+
+01:05:29,219 [SPEAKER_1]
+ Ja se ispričavam, nisam znao tko ste, pa hvala na predstavljanju. Znači, da li sam dobro razumio da je ovo argument da se reformira MiCA i da se makne limit da 60%
+
+01:05:44,890 [SPEAKER_1]
+ pokrića stablecoina mora biti u bankovnim depozitima i da se taj limit smanji.
+
+01:05:52,280 [SPEAKER_1]
+ Znači prema Markets and Cryptoassets regulativi, svaki sistemski stablecoin, znači ozbiljno velik stablecoin, 60% svog kolaterala mora držati u bankovnim depozitima. Američka regulativa to ne zahtijeva, dopušta da taj kolateral bude u obveznicama, ali time je ovaj rizik o kojem pričate eliminiran. Da li to znači da je onda potrebno eliminirati to ograničenje iz MiCA-e?
+
+01:06:33,420 [SPEAKER_1]
+ Ne, ne, ne izlazi.
+
+01:06:56,970 [SPEAKER_8]
+ Hvala što pratite kanal. Zdravo, ne moramo se početi.
+
+01:07:07,950 [SPEAKER_8]
+ Ispeve, ispeve! Hvala što pratite kanal.
+
+01:07:22,890 [SPEAKER_8]
+ Hvala vam.
+
+01:07:24,740 [SPEAKER_8]
+ Jasno, slijedno. Jasno, slijedno. Jasno, slijedno. Hvala što pratite.
+
+01:07:41,400 [SPEAKER_1]
+ Mislim da je to od zaključaka koje smo ovdje imali. Rizik ukupni za financijski sustav bi bio puno manji da živimo u 2015. godini prije pojave stablecoina. Rizik bi bio puno manji da živimo u 1980. prije
+
+01:07:57,960 [SPEAKER_1]
+ Glass-Steagall i tak dalje, deregulacije banaka. Naravno da živimo u nekom drugom vremenu, rizici bi bili, mnogi ovdje bi puno mirnije spavali, ali pitanje je što učiniti danas kad imamo taj rizik dodatnog zaostajanja europske financijske industrije. Mislim da je to puno relevantnije pitanje nego u kojem vremenu bi radije živjeli.
+
+01:08:21,610 [SPEAKER_2]
+ Dobro, ovo je u svakom slučaju bila, nije toliko bilo pitanje koliko malo pojašnjenje konteksta i hvala, hvala Vedrane na tome. Marko, hoćeš ti komentirati ili mislim da imamo još jedno pitanje, ako ne i dva?
+
+01:08:31,110 [SPEAKER_3]
+ Nastavimo s pitanjima, inače to samo pokazuje. O spavanju da je naslov cijele serije predavanja dobro odabran. Zašto guverneri ne spavaju?
+
+01:08:41,050 [SPEAKER_9]
+ Eto. Hvala, Filip Šaravanja. Zapravo jedno pitanje i komentar možda za gospodina Šošića. Možda griješim brojeve govorim, ali sad znam ako stablecoin ima ni institucija u EU, ima ih možda desetak licencirano, a ukupan broj emitiranja je nekih 700-800 po visoko trenutku i ti 350 miliona koji su oni izdali je igla u plastu sijena, pa ne znam na temelju čega? Na temelju kojih pokazatelja možemo reći da je to dinamit? 350 miliona eura u cijelom bankarskom sustavu Europe dinamit na bilanci banaka.
+
+01:09:24,030 [SPEAKER_9]
+ Znači u prijevodu je rizik ako
+
+01:09:26,660 [SPEAKER_9]
+ radimo nešto, ako ne radimo onda nema rizika.
+
+01:09:34,710 [SPEAKER_2]
+ Mislim da imamo ovdje jako puno prostora, ima tu puno pitanja. Tu iza imamo isto tako iz bankarskog sektora pitanje. Josip Pečnik.
+
+01:09:46,190 [SPEAKER_7]
+ Josip Majher, HPB. Hvala. Htio bih skomentirati par stvari uključujući pitanje zašto banke moraju ući. Znači, u Frankfurtu na Sibosu krajem devetog mjeseca, znači, nije postojala ni jedna druga tema osim digitalizacije asseta, osim stablecoina i blockchaina. Bio sam kad je Christopher Waller iz Feda došao i dostavio svoj tablet i krenuo govoriti sljedeće: centralne banke više ne trebaju imati monopol na primarnu emisiju novca ukoliko potrošači žele koristiti
+
+01:10:19,480 [SPEAKER_7]
+ novac drugih proizvođača, tko smo mi da im zabranimo. Znači tako je počela
+
+01:10:24,310 [SPEAKER_7]
+ Tako je počelo predavanje, od toga je išlo. Isti dan, u istoj prostoriji, Swift je proglasio Blockchain Ledger. Isti dan u istoj prostoriji. Gospodin Nagel iz Bundesbanke je zapravo direktno priznao da digitalni euro nema nikakve veze ni s čim osim kao sredstvo monetarne solidarnosti i zapravo geopolitičkog rata, da Europa mora imati svoj payment railway. I citiram što je rekao, njegov san je do 2030. dokada mu je mandat, da na Lufthansinom letu iz
+
+01:10:57,600 [SPEAKER_7]
+ New Yorka za Frankfurt može platiti s europskim sredstvom plaćanja, ne Visa, Master, Apple Pay, Google Pay. Tako da možemo se složiti da stablecoin i ovo je ušlo u mainstream. Ne toliko zbog
+
+01:11:13,350 [SPEAKER_7]
+ prirodne evolucije koliko je zbog Trumpa. To je činjenica. Prošle godine u Pekingu na Sibosu bile su neke potpuno druge teme. E sad. Zašto banke tu trebaju ući? Zato što, i to sam pričao sa panelom ovih devet banaka koje su radile europski stablecoin, priča je u depozitima. Znači, ukoliko velika koncentracija depozita ode na depozitare koji su kao što je Circle, kao što je Stablecoin, prvo, miče se likvidnost iz bankarskog sustava i osušivate. I drugo, oni imaju jako veliku mogućnost pregovaranja, odnosno utjecaja gdje će plasirati ta alocirana sredstva koja služe kao peg za stablecoin. Način, stablecoin služi platnom prometu, ali igra je u onome što su depoziti koji se koriste za peganje na stablecoin. Znači, banke moraju ući da bi sačuvale svoju likvidnost. Da ta likvidnost ne bi završila koncentrirano kod nekoliko igrača koji onda
+
+01:12:16,850 [SPEAKER_7]
+ imaju preveliku snagu depozita. Zato su ušli Raiffeisen, Credit Agricole, ING, kojih je već u devet, pričao sam sa kolegom Hribarom, izraelski Faizon daje.
+
+01:12:28,500 [SPEAKER_7]
+ Bio je zapravo na panelu na
+
+01:12:30,909 [SPEAKER_7]
+ na Sibosu? I to je istina i to je razlog zašto surađujemo Nikola i mi kao banka. Neki projekti imaju
+
+01:12:40,019 [SPEAKER_7]
+ činiti se to da
+
+01:12:42,030 [SPEAKER_7]
+ stvari koje su ušle u mainstream se ne mogu vratiti natrag nego im se treba prilagoditi.
+
+01:12:47,760 [SPEAKER_7]
+ To nikad neće doći do apsolutnosti, činjenica je da kriptoentuzijasti
+
+01:12:53,390 [SPEAKER_7]
+ možda precjenjuju magnitudu toga, ali činjenica da je to tu i to postoji. Ako je to prepoznao Western Union, ako je prepoznao Swift, ako je prepoznala Visa, ako su svi na blockchainu, nema tu razloga da se mi ne uključimo. I činjenica, činjenica je ta da je ona America innovates, China imitates, Europe regulates. To je dosta teško.
+
+01:13:19,720 [SPEAKER_7]
+ Tako da, evo, podržavam ovu priču, ali mislim da da ostane na stavki zašto su banke tu, da spriječe odljev depozita.
+
+01:13:28,940 [SPEAKER_2]
+ Hvala Josipe na komentaru. Evo, da vas ne bi dugo davili, mislim da imamo još jedno pitanje ovdje i onda ćemo privesti kraju naš panel.
+
+01:13:38,560 [SPEAKER_6]
+ Hvala.
+
+01:13:40,730 [SPEAKER_6]
+ Znači ja imam pitanje za bivšeg, gospodina Škreba. Znači ja uvijek postavljam pitanje vezano za centralne banke i našu centralnu banku. Tu radi sto ljudi. I sad kad pogledamo cijelu Europu, koliko ima zaposlenih u EU, a ima 500 milijuna. Znači ja se pitam pa koliko Kina ima zaposlenih ljudi u centralnoj banci. Pa me zanima taj omjer Kina, Indija i Europska unija.
+
+01:14:06,179 [SPEAKER_3]
+ Iskreno odgovor je ne znam. Ono što vam mogu reći je da sam pred dvije godine radio veliku benchmarking studiju usporedbe broja zaposlenih u Hrvatskoj narodnoj banci sa tzv. peer bankama. Gledali smo usporedbu, peer banke su bile za nas one koje su nedavno ušle u Europsku uniju, ajmo reći Nova Europa, dakle Slovačka,
+
+01:14:34,900 [SPEAKER_3]
+ Estonija, Latvija, Litva, ne znam koja je bila peta. Opet banaka. I tu je Hrvatska narodna banka jako dobro stajala. Gledali smo podatke po broju stanovnika, po glavi stanovnika. Ponavljam, za Kinu ne znam. Ali teško vam je uspoređivati s velikima jer dobijete, ali što se tiče zapošljavanja, evo. Ne znam da li je studija objavljena, ali pokazuju se jako dobri rezultati što se tiče broja zaposlenih u Hrvatskoj narodnoj banci, umjereni, dakle nema previše ljudi.
+
+01:15:17,630 [SPEAKER_2]
+ Dobro, to nam je malo, moram vas prekinuti, malo nam je to off topic, nije nam to tema ove diskusije, tako da žao mi je zbog toga, ali mislim da je to dosta.
+
+01:15:27,420 [SPEAKER_2]
+ U svakom slučaju mislim da je ovo bilo svima jako korisno. Zaključak je da nam treba ovakav dijalog, treba nam ga sve više, treba nam uključenje iskustva i optimizma i mislim da možemo svi zajedno ići naprijed. Hrvatska ima jako veliku ulogu u svemu tome i trebala bi imati. Hvala još jednom gostima. Marko, ja sam ti privatizirao panel, ali evo, molim vas još jedan pljesak za Marka i Nikolu. Hvala puno.

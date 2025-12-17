@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stablecoini: Budućnost plaćanja ili uvod u novu krizu? | Timeline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --bg-card-hover: #22222e;
+            --text-primary: #f0f0f5;
+            --text-secondary: #9090a0;
+            --text-muted: #606070;
+            --accent-blue: #4a9eff;
+            --accent-green: #00d4aa;
+            --accent-purple: #a855f7;
+            --accent-orange: #ff9f43;
+            --accent-red: #ff6b6b;
+            --accent-cyan: #22d3ee;
+            --border-color: #2a2a3a;
+            --timeline-line: linear-gradient(180deg, #4a9eff 0%, #a855f7 50%, #00d4aa 100%);
+            --glow-blue: rgba(74, 158, 255, 0.15);
+            --glow-purple: rgba(168, 85, 247, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* Grain overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 20%, var(--glow-blue) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 80%, var(--glow-purple) 0%, transparent 50%);
+            animation: heroGlow 15s ease-in-out infinite;
+        }
+
+        @keyframes heroGlow {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(-5%, 5%) rotate(3deg); }
+            66% { transform: translate(5%, -5%) rotate(-3deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-badge::before {
+            content: '▶';
+            color: var(--accent-red);
+            font-size: 0.7rem;
+        }
+
+        .hero h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.1s both;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .hero-meta-item svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--accent-blue);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--accent-blue);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Speakers Section */
+        .speakers-section {
+            padding: 4rem 2rem;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .speaker-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .speaker-card:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-4px);
+            border-color: var(--accent-blue);
+        }
+
+        .speaker-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .speaker-info h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .speaker-info p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 6rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .timeline-header h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--timeline-line);
+            border-radius: 3px;
+        }
+
+        .timeline-chapter {
+            margin-bottom: 4rem;
+        }
+
+        .chapter-title {
+            position: relative;
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .chapter-title::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            background: var(--bg-primary);
+            border: 3px solid var(--accent-blue);
+            border-radius: 50%;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideIn 0.5s ease-out forwards;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.15s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.25s; }
+        .timeline-item:nth-child(5) { animation-delay: 0.3s; }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.65rem;
+            top: 1.5rem;
+            width: 9px;
+            height: 9px;
+            background: var(--bg-primary);
+            border: 2px solid var(--text-muted);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover::before {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 4px var(--glow-blue);
+        }
+
+        .timeline-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-color);
+            transform: translateX(8px);
+        }
+
+        .timeline-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .speaker-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .speaker-tag.nikola {
+            background: rgba(0, 212, 170, 0.15);
+            color: var(--accent-green);
+            border: 1px solid rgba(0, 212, 170, 0.3);
+        }
+
+        .speaker-tag.marko {
+            background: rgba(168, 85, 247, 0.15);
+            color: var(--accent-purple);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        .speaker-tag.bozidar {
+            background: rgba(74, 158, 255, 0.15);
+            color: var(--accent-blue);
+            border: 1px solid rgba(74, 158, 255, 0.3);
+        }
+
+        .speaker-tag.vedran {
+            background: rgba(255, 159, 67, 0.15);
+            color: var(--accent-orange);
+            border: 1px solid rgba(255, 159, 67, 0.3);
+        }
+
+        .speaker-tag.josip {
+            background: rgba(34, 211, 238, 0.15);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(34, 211, 238, 0.3);
+        }
+
+        .speaker-tag.publika {
+            background: rgba(255, 107, 107, 0.15);
+            color: var(--accent-red);
+            border: 1px solid rgba(255, 107, 107, 0.3);
+        }
+
+        .timestamp {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-left: auto;
+        }
+
+        .timeline-card-content {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .timeline-card-content p {
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-card-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .quote {
+            position: relative;
+            padding: 1rem 1.25rem;
+            background: rgba(74, 158, 255, 0.05);
+            border-left: 3px solid var(--accent-blue);
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+
+        .quote.highlight-green {
+            background: rgba(0, 212, 170, 0.05);
+            border-left-color: var(--accent-green);
+        }
+
+        .quote.highlight-purple {
+            background: rgba(168, 85, 247, 0.05);
+            border-left-color: var(--accent-purple);
+        }
+
+        .quote.highlight-orange {
+            background: rgba(255, 159, 67, 0.05);
+            border-left-color: var(--accent-orange);
+        }
+
+        .key-point {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(74, 158, 255, 0.1);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            margin-top: 0.75rem;
+        }
+
+        .key-point svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Key Takeaways Section */
+        .takeaways-section {
+            padding: 6rem 2rem;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .takeaways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .takeaway-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .takeaway-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-blue);
+        }
+
+        .takeaway-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .takeaway-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .takeaway-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline::before {
+                left: 4px;
+            }
+
+            .chapter-title::before {
+                left: -2rem;
+                width: 12px;
+                height: 12px;
+            }
+
+            .timeline-item::before {
+                left: -1.7rem;
+                width: 7px;
+                height: 7px;
+            }
+
+            .timeline-card-header {
+                flex-wrap: wrap;
+            }
+
+            .timestamp {
+                margin-left: 0;
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+
+            .hero-meta {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>Monetera, HNB • Panel diskusija</span>
+            </div>
+            <h1>Stablecoini: <span>Budućnost plaćanja</span> ili uvod u novu krizu?</h1>
+            <p class="hero-subtitle">Kronološki pregled panel diskusije o budućnosti stablecoina u Europi s vodećim stručnjacima iz financijskog i kripto sektora.</p>
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                    </svg>
+                    <span>Serija "Zašto guverneri ne spavaju"</span>
+                </div>
+                <div class="hero-meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>~75 minuta</span>
+                </div>
+                <div class="hero-meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                    <span>Muzej novca HNB, Zagreb</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll za timeline</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section class="speakers-section">
+        <h2 class="section-title">Sudionici panel diskusije</h2>
+        <div class="speakers-grid">
+            <div class="speaker-card">
+                <div class="speaker-avatar" style="background: rgba(0, 212, 170, 0.15); color: var(--accent-green);">NŠ</div>
+                <div class="speaker-info">
+                    <h3>Nikola Škorić</h3>
+                    <p>Kripto industrija, Electrocoin</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <div class="speaker-avatar" style="background: rgba(168, 85, 247, 0.15); color: var(--accent-purple);">MŠ</div>
+                <div class="speaker-info">
+                    <h3>Marko Škreb</h3>
+                    <p>Bivši guverner HNB-a</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <div class="speaker-avatar" style="background: rgba(74, 158, 255, 0.15); color: var(--accent-blue);">BP</div>
+                <div class="speaker-info">
+                    <h3>Božidar Pavlović</h3>
+                    <p>Moderator</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <div class="speaker-avatar" style="background: rgba(255, 159, 67, 0.15); color: var(--accent-orange);">VŠ</div>
+                <div class="speaker-info">
+                    <h3>Vedran Šošić</h3>
+                    <p>Glavni ekonomist HNB-a</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <div class="speaker-avatar" style="background: rgba(34, 211, 238, 0.15); color: var(--accent-cyan);">JM</div>
+                <div class="speaker-info">
+                    <h3>Josip Majher</h3>
+                    <p>HPB, bankarski sektor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="timeline-header">
+            <h2>Kronologija diskusije</h2>
+            <p>Detaljni vremenski pregled svih ključnih točaka, argumenata i zaključaka panel diskusije.</p>
+        </div>
+
+        <div class="timeline">
+            <!-- Chapter 1: Uvod -->
+            <div class="timeline-chapter">
+                <h3 class="chapter-title">1. Uvod i definicije</h3>
+                
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag bozidar">Božidar Pavlović</span>
+                            <span class="timestamp">00:01:22</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Otvara diskusiju s napomenom da stavovi nisu službeni stavovi HNB-a niti ECB-a, već osobna mišljenja panelista.</p>
+                            <p>Najavljuje tri recentna događaja:</p>
+                            <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+                                <li>Konzorcij 9 europskih banaka najavio izdavanje europskog stablecoina</li>
+                                <li>Bank of England objavio dokument o regulaciji stablecoina</li>
+                                <li>Klarna (čiji je CEO 2023. nazvao Bitcoin "digitalnom Ponzi shemom") najavila vlastiti stablecoin</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp">00:02:10</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Objašnjava osnovnu definiciju stablecoina:</p>
+                            <div class="quote highlight-green">
+                                "Stablecoini su kriptovalute koje su vezane za neku fiat valutu - dolar, euro, jen i tako dalje. Za razliku od Bitcoina koji oscilira u vrijednosti, stablecoini održavaju stabilnu vrijednost."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag marko">Marko Škreb</span>
+                            <span class="timestamp">00:06:14</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Objašnjava razliku između javnog i privatnog novca:</p>
+                            <div class="quote highlight-purple">
+                                "Javni novac je onaj novac koji izdaje središnja banka - gotovina i računi banaka. Sve drugo je privatni novac. Fiat novac znači da je država rekla 'to je zakonito sredstvo plaćanja'. Fiducijarni novac je novac kojem vjerujete da će se primati."
+                            </div>
+                            <div class="key-point">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                                </svg>
+                                Ključ svih financija je povjerenje
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 2: Use cases -->
+            <div class="timeline-chapter">
+                <h3 class="chapter-title">2. Zašto stablecoini? Use cases</h3>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp">00:07:56</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Argumentira poslovnu priliku:</p>
+                            <div class="quote highlight-green">
+                                "Stablecoin prometi su pred nekih mjesec dana na godišnjoj razini prešli iznos transakcija koje ima Visa. Ne da su došli do razine Vise, nego su je prestigli i rastu strelovito."
+                            </div>
+                            <p>Ističe da je još 2024. ECB tvrdio da kripto nema use case, a sada priznaju transformativnu moć tehnologije.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp">00:10:47</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Opisuje praktične prednosti:</p>
+                            <div class="quote highlight-green">
+                                "Ja se ulogiram u subotu, u tri u jutro, dođem izvana, ulogiram se na burzu, prebacim novce 24/7, likvidnost beskonačna. Oni iz DTCC-a ne mogu vjerovati da mogu iz Tokija raditi dok New York spava."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag marko">Marko Škreb</span>
+                            <span class="timestamp">00:16:49</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Priznaje konkretne prednosti stablecoina:</p>
+                            <div class="quote highlight-purple">
+                                "Transakcije se mjere u sekundama, ne 3-5 dana kao u bankama. Cijena? U centima. Ako idete iz eura u stablecoin, napravite transakciju i vratite se u fiat - neće vas koštati preko jednog eura. U odnosu na 3-5% provizije, to je nezamislivo."
+                            </div>
+                            <p>Navodi i treći use case: programabilna plaćanja preko smart contracta - automatizacija fakturiranja bez 50 ljudi u računovodstvu.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp">00:12:04</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Primjer Western Uniona:</p>
+                            <div class="quote highlight-green">
+                                "Western Union je u određenom segmentu tržišta monopolist. Radi se o tehnološkom dinosauru. I oni sad izdaju svoj stablecoin - vijest od pred mjesec dana."
+                            </div>
+                            <p>Ističe da čak i konzervativne kompanije ulaze u ovu tehnologiju.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 3: Yield i regulacija -->
+            <div class="timeline-chapter">
+                <h3 class="chapter-title">3. Yield, DeFi i pitanje regulacije</h3>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp">00:19:04</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Objašnjava kako funkcionira yield u DeFi-ju:</p>
+                            <div class="quote highlight-green">
+                                "Ja svoju ušteđevinu ne držim na banci, nego u stablecoinima u vaultu - smart contractu. Zadnji izračun: dobivam 6,25%. Smart contracti pružaju moju likvidnost za tradanje, održavanje kolaterala, decentralizirane burze..."
+                            </div>
+                            <p>Napominje da su takvi yield-bearing proizvodi u Europi ilegalni prema MiCA regulativi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag marko">Marko Škreb</span>
+                            <span class="timestamp">00:18:22</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Potvrđuje regulatorne restrikcije:</p>
+                            <div class="quote highlight-purple">
+                                "I u Americi i u Europi - i Genius Act i MiCA zabranjuju davanje kamata na stablecoine."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 4: Tether i povjerenje -->
+            <div class="timeline-chapter">
+                <h3 class="chapter-title">4. Tether - crna ovca industrije</h3>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag marko">Marko Škreb</span>
+                            <span class="timestamp">00:24:15</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Kritizira netransparentnost Tethera:</p>
+                            <div class="quote highlight-purple">
+                                "Pred tri dana je S&P smanjio ocjenu Tethera na najnižu moguću razinu, praktički na junk. Zašto? Zato što Tether nikad nije objavio revidiranu bilancu. A ima 180 milijardi dolara."
+                            </div>
+                            <p>Napominje da je Tether osnovan na British Virgin Islandu, a u siječnju preselio u El Salvador. Također spominje donaciju za rušenje istočnog krila Bijele kuće.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag marko">Marko Škreb</span>
+                            <span class="timestamp">00:25:48</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Daje primjer funkcionirajućeg sustava povjerenja:</p>
+                            <div class="quote highlight-purple">
+                                "Bosna i Hercegovina ima valutni odbor - svaka marka ima pokriće u euru. Svaki kvartal objavljuju bilancu s točnim sastavom rezervi. Funkcionira 30 godina jer ljudi vjeruju, jer podaci postoje."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp">00:32:00</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Daje predikciju za Tether:</p>
+                            <div class="quote highlight-green">
+                                "Tether je financirao rušenje istočnog krila Bijele kuće. Vjerujte mi, Tether će dobiti licencu kroz godinu dana. Oni su se odlučili kroz suradnju s predsjednikom Trumpom legalizirati svoje poslovanje."
+                            </div>
+                            <p>Ali naglašava: <em>"Mi nećemo izabrati Tether za naš projekt. Želimo raditi s bankama i osigurati sigurnost korisnicima."</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 5: Rizici -->
+            <div class="timeline-chapter">
+                <h3 class="chapter-title">5. Regulirani vs. neregulirani stablecoini</h3>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp">00:44:18</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Objašnjava europsku regulaciju:</p>
+                            <div class="quote highlight-green">
+                                "Da biste izdali stablecoin u Europi prema MiCA regulativi, morate imati licencu za elektronički novac. U Hrvatskoj ih ima 7-8 takvih institucija. Regulira ih HNB. Svaki euro koji je vani - postoji negdje. Nema netransparentnosti."
+                            </div>
+                            <p>Daje primjer Aircasha: ako izgubite povjerenje, jednostavno prebacite novce u banku jer je sve pokriveno kolateralom.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp">00:38:40</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Uspoređuje pokriće banaka i stablecoina:</p>
+                            <div class="quote highlight-green">
+                                "Prema MiCA-i, najveći stablecoini moraju držati 60% likvidnosti u bankovnim depozitima, 40% u visoko likvidnim obveznicama. Stablecoini moraju biti 100% pokriveni. Ako banka propadne - fractional banking. Ako propadne regulirani stablecoin - svi korisnici dobiju povrat."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag marko">Marko Škreb</span>
+                            <span class="timestamp">00:43:00</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Ističe prednost bankarskog sustava:</p>
+                            <div class="quote highlight-purple">
+                                "Za razliku od nebankarskog sektora, u bankarstvu imate centralnu banku koja može dodati likvidnosti koliko god treba - neograničeno. To se zove Open Market Operations. Za individualne institucije postoji zajmodavac u zadnjoj nuždi. Toga kod stablecoina nema."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 6: SVB -->
+            <div class="timeline-chapter">
+                <h3 class="chapter-title">6. Slučaj Silicon Valley Bank</h3>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp">00:37:35</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Analizira SVB kolaps:</p>
+                            <div class="quote highlight-green">
+                                "Kad je propala SVB na jedan vikend, Circle je izgubio depeg od 3-4%. Zato što bankarski sustav iz nekog razloga ne zna micati novac od petka kad zatvore. U ponedjeljak se sve izravnalo. Vlasnici Circle stablecoina ne bi izgubili ništa jer bi Circle to pokrio iz svojih profita. A pola američke startup industrije bi umrlo."
+                            </div>
+                            <div class="key-point">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                                </svg>
+                                "Nije problem u stablecoinu. Problem je u banci."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag vedran">Vedran Šošić (HNB)</span>
+                            <span class="timestamp">01:02:05</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Daje detaljniju analizu SVB slučaja:</p>
+                            <div class="quote highlight-orange">
+                                "SVB je ulagala u državne obveznice - tipična imovina stablecoina. Nisu bila rizična ulaganja. Ali obveznice osciliraju u vrijednosti. Kupili su kad su prinosi bili niski. Problem: banka je imala deponente koji vole cijeli depozit prebaciti u tri sata u noći u sekundi."
+                            </div>
+                            <p>Zaključuje da se takva navala na banku nikad u povijesti nije dogodila - i nijedna banka na svijetu ne bi preživjela.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 7: Sistemski rizik -->
+            <div class="timeline-chapter">
+                <h3 class="chapter-title">7. "Dinamit u temeljima bankarstva"</h3>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag vedran">Vedran Šošić (HNB)</span>
+                            <span class="timestamp">01:03:33</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Objašnjava zabrinutost ECB-a:</p>
+                            <div class="quote highlight-orange">
+                                "Stablecoini ne drže samo obveznice, nego i depozite kod banaka. Umjesto puno malih, sporih, inertnih deponenata, imate manji broj velikih deponenata koji na svaki šušanj trče i prebacuju novce. To je dinamit u temelje bankovnog sustava."
+                            </div>
+                            <p>Problem nije propast stablecoina - problem je šteta koju stablecoini kao hiperlikvidni deponenti mogu napraviti bankama. Centralna banka možda neće stići proizvesti dovoljno likvidnosti.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp">01:05:29</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Postavlja pitanje o MiCA regulativi:</p>
+                            <div class="quote highlight-green">
+                                "Prema MiCA-i, sistemski stablecoini moraju držati 60% kolaterala u bankovnim depozitima. Američka regulativa to ne zahtijeva - dopušta da kolateral bude u obveznicama. Da li to znači da treba ukloniti to ograničenje iz MiCA-e?"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag publika">Filip Šaravanja (publika)</span>
+                            <span class="timestamp">01:08:41</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Dovodi u pitanje razmjere:</p>
+                            <div class="quote">
+                                "Ima možda desetak licenciranih stablecoin institucija u EU, ukupno su izdali 350 milijuna eura. To je igla u plastu sijena. Na temelju čega možemo reći da je 350 milijuna eura 'dinamit' za cijeli europski bankarski sustav?"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 8: Dolarizacija -->
+            <div class="timeline-chapter">
+                <h3 class="chapter-title">8. Rizik dolarizacije Europe</h3>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag marko">Marko Škreb</span>
+                            <span class="timestamp">00:36:08</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Citira upozorenje András Treichla (bivši CEO Erste):</p>
+                            <div class="quote highlight-purple">
+                                "99% stablecoina je denominirano u dolarima. Manje od 1% u eurima. Ako ljudi u Europi počnu koristiti stablecoine denominirane u dolarima za plaćanja, gubimo monetarnu suverenost. ECB gubi kontrolu nad monetarnom politikom."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp">00:41:36</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Upozorava na posljedice pretjerane regulacije:</p>
+                            <div class="quote highlight-green">
+                                "Digitalni euro dolazi u najboljem slučaju 2029. Svijet se u potpunosti dolarizira u te četiri godine. Zašto su oba dva izdavača stablecoina u Americi? Zašto su oba card procesora američka? Zašto je propao projekt Libra? America innovates, China imitates, Europe regulates."
+                            </div>
+                            <div class="key-point">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                                </svg>
+                                Dva rizika: fire sale obveznica (30 god iskustva) vs. zaostajanje Europe (nepovratan)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 9: Zašto banke -->
+            <div class="timeline-chapter">
+                <h3 class="chapter-title">9. Zašto banke moraju ući u stablecoin biznis</h3>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag josip">Josip Majher (HPB)</span>
+                            <span class="timestamp">01:09:46</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Izvještava sa Sibos konferencije u Frankfurtu:</p>
+                            <div class="quote" style="border-left-color: var(--accent-cyan); background: rgba(34, 211, 238, 0.05);">
+                                "Na Sibosu nije postojala nijedna druga tema osim stablecoina i blockchaina. Christopher Waller iz Feda je rekao: 'Centralne banke više ne trebaju imati monopol na primarnu emisiju novca. Ako potrošači žele koristiti novac drugih proizvođača, tko smo mi da im zabranimo.'"
+                            </div>
+                            <p>Istog dana Swift je proglasio Blockchain Ledger, a Nagel iz Bundesbanke priznao da je digitalni euro geopolitičko oružje - njegov san je do 2030. platiti na Lufthansa letu europskim sredstvom, ne Visa/Master/Apple Pay.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag josip">Josip Majher (HPB)</span>
+                            <span class="timestamp">01:11:13</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Objašnjava motivaciju banaka:</p>
+                            <div class="quote" style="border-left-color: var(--accent-cyan); background: rgba(34, 211, 238, 0.05);">
+                                "Priča je u depozitima. Ako koncentracija depozita ode na Circle i slične, miče se likvidnost iz bankarskog sustava. Oni dobivaju ogromnu pregovaračku moć. Banke moraju ući da sačuvaju svoju likvidnost. Zato su ušli Raiffeisen, Credit Agricole, ING..."
+                            </div>
+                            <p>Zaključuje: <em>"Stvari koje su ušle u mainstream se ne mogu vratiti natrag - treba im se prilagoditi. Ako su to prepoznali Western Union, Swift i Visa, nema razloga da se mi ne uključimo."</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 10: Zaključak -->
+            <div class="timeline-chapter">
+                <h3 class="chapter-title">10. Zaključak i poziv na akciju</h3>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp">00:53:54</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Završna poruka - potencijal Europe:</p>
+                            <div class="quote highlight-green">
+                                "Najveće AI firme su u SAD-u, ali najveći AI research instituti su u Europi. U Hrvatskoj imamo ne znam koliko unicorna po glavi stanovnika - daleko iznad prosjeka. Imamo zlatne medalje na matematičkim i informatičkim olimpijadama. Imamo ogroman potencijal. Zašto ne izađemo na otvoreno tržište i porazimo Amerikance?"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp">00:55:08</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Vizija suradnje:</p>
+                            <div class="quote highlight-green">
+                                "Pričamo o tome da su stablecoini prešli Visu, a to je industrija koja je do pred godinu dana bila prosta riječ u bankarskim krugovima. Bili smo 'dečki s ulice'. Što će se desiti kad banke i naša industrija zajedno upregnu? Mislim da imamo veliku priliku."
+                            </div>
+                            <div class="key-point">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                Jačanje EU bankarstva + jačanje EU kripto industrije + suradnja
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag bozidar">Božidar Pavlović</span>
+                            <span class="timestamp">01:15:27</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            <p>Zaključak moderatora:</p>
+                            <div class="quote">
+                                "Zaključak je da nam treba ovakav dijalog, treba nam ga sve više. Treba nam uključenje iskustva i optimizma. Hrvatska ima veliku ulogu u svemu tome i trebala bi imati."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section class="takeaways-section">
+        <h2 class="section-title">Ključni zaključci</h2>
+        <div class="takeaways-grid">
+            <div class="takeaway-card">
+                <div class="takeaway-icon" style="background: rgba(0, 212, 170, 0.15);">📈</div>
+                <h3>Stablecoini su prešli Visu</h3>
+                <p>Godišnji promet stablecoina nadmašio je Visa transakcije - tehnologija je dostigla mainstream.</p>
+            </div>
+            <div class="takeaway-card">
+                <div class="takeaway-icon" style="background: rgba(168, 85, 247, 0.15);">⚖️</div>
+                <h3>Regulirani vs. neregulirani</h3>
+                <p>Europski stablecoini (EMI licence, MiCA) su potpuno drugačija kategorija od Tethera - 100% pokriće kolateralom.</p>
+            </div>
+            <div class="takeaway-card">
+                <div class="takeaway-icon" style="background: rgba(255, 159, 67, 0.15);">💣</div>
+                <h3>Rizik koncentracije depozita</h3>
+                <p>ECB-ova briga: stablecoini kao hiperlikvidni deponenti mogu destabilizirati banke brzinom povlačenja.</p>
+            </div>
+            <div class="takeaway-card">
+                <div class="takeaway-icon" style="background: rgba(74, 158, 255, 0.15);">🇺🇸</div>
+                <h3>Rizik dolarizacije</h3>
+                <p>99% stablecoina u USD. Digitalni euro tek 2029. Europa gubi monetarnu suverenost.</p>
+            </div>
+            <div class="takeaway-card">
+                <div class="takeaway-icon" style="background: rgba(34, 211, 238, 0.15);">🏦</div>
+                <h3>Banke moraju ući</h3>
+                <p>9 velikih EU banaka već radi na europskom stablecoinu - da sačuvaju likvidnost i pregovaračku moć.</p>
+            </div>
+            <div class="takeaway-card">
+                <div class="takeaway-icon" style="background: rgba(255, 107, 107, 0.15);">🤝</div>
+                <h3>Suradnja je ključ</h3>
+                <p>Jačanje EU bankarskog sustava + kripto industrije + međusobna suradnja = prilika za Europu.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            Izvor: <a href="https://www.youtube.com/watch?v=Er5CcLF4xyg" target="_blank">YouTube - Monetera HNB</a> • 
+            Serija "Zašto guverneri ne spavaju" • 
+            Transkript generiran i vizualiziran pomoću AI
+        </p>
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.style.animationPlayState = 'paused';
+            observer.observe(item);
+        });
+
+        // Smooth scroll for scroll indicator
+        document.querySelector('.scroll-indicator')?.addEventListener('click', () => {
+            document.querySelector('.speakers-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+    </script>
+</body>
+</html>

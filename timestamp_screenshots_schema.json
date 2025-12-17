@@ -1,0 +1,306 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.example.com/youtube-screenshot-manifest.json",
+  "title": "YouTube Screenshot Manifest",
+  "description": "Schema za definiranje screenshotova iz YouTube video zapisa za automatsko generiranje slika s timestampovima",
+  "type": "object",
+  "required": ["metadata", "screenshots"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "description": "Metapodaci o video zapisu i konfiguracija outputa",
+      "required": ["video_url", "video_id", "video_title", "total_screenshots"],
+      "properties": {
+        "video_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Puni URL YouTube video zapisa",
+          "examples": ["https://www.youtube.com/watch?v=Er5CcLF4xyg"]
+        },
+        "video_id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_-]{11}$",
+          "description": "YouTube video ID (11 znakova)",
+          "examples": ["Er5CcLF4xyg"]
+        },
+        "video_title": {
+          "type": "string",
+          "description": "Naslov video zapisa",
+          "examples": ["Stablecoini: Budućnost plaćanja ili uvod u novu krizu?"]
+        },
+        "source": {
+          "type": "string",
+          "description": "Izvor/kanal video zapisa",
+          "examples": ["Monetera, Muzej novca HNB"]
+        },
+        "series": {
+          "type": ["string", "null"],
+          "description": "Naziv serije ako je video dio serije",
+          "examples": ["Zašto guverneri ne spavaju"]
+        },
+        "total_screenshots": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Ukupan broj screenshotova za generiranje"
+        },
+        "generated_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 datum i vrijeme generiranja manifesta"
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{2}$",
+          "description": "ISO 639-1 kod jezika",
+          "examples": ["hr", "en", "de"]
+        },
+        "output_directory": {
+          "type": "string",
+          "description": "Relativni path direktorija za output screenshotove",
+          "default": "screenshots"
+        },
+        "filename_format": {
+          "type": "string",
+          "description": "Template za generiranje naziva datoteka. Podržane varijable: {index}, {timestamp_clean}, {slug}",
+          "default": "{index:02d}_{timestamp_clean}_{slug}.png",
+          "examples": ["{index:02d}_{timestamp_clean}_{slug}.png", "screenshot_{id}_{timestamp_seconds}.png"]
+        }
+      }
+    },
+    "speakers": {
+      "type": "object",
+      "description": "Mapa govornika/sudionika u video zapisu. Ključ je slug ID govornika.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["full_name", "slug"],
+        "properties": {
+          "full_name": {
+            "type": "string",
+            "description": "Puno ime govornika",
+            "examples": ["Nikola Škorić", "Marko Škreb"]
+          },
+          "role": {
+            "type": "string",
+            "description": "Uloga ili titula govornika",
+            "examples": ["Moderator", "Glavni ekonomist HNB-a", "Kripto industrija"]
+          },
+          "color_code": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}$",
+            "description": "Hex kod boje za vizualno označavanje govornika",
+            "examples": ["#00d4aa", "#a855f7"]
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$",
+            "description": "URL-safe slug za korištenje u nazivima datoteka",
+            "examples": ["skoric", "skreb", "pavlovic"]
+          },
+          "avatar_url": {
+            "type": ["string", "null"],
+            "format": "uri",
+            "description": "Opcionalni URL do slike/avatara govornika"
+          }
+        }
+      }
+    },
+    "screenshots": {
+      "type": "array",
+      "description": "Lista svih screenshotova za generiranje",
+      "items": {
+        "type": "object",
+        "required": ["id", "filename", "timestamp", "timestamp_seconds", "caption_hr"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Jedinstveni redni broj screenshota"
+          },
+          "filename": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+\\.png$",
+            "description": "Generirani naziv PNG datoteke (lowercase, alphanumeric, underscore only)",
+            "examples": ["07_000809_skoric_stablecoini_presli_visu.png"]
+          },
+          "timestamp": {
+            "type": "string",
+            "pattern": "^[0-9]{2}:[0-9]{2}:[0-9]{2}$",
+            "description": "Timestamp u formatu HH:MM:SS",
+            "examples": ["00:08:09", "01:03:33"]
+          },
+          "timestamp_seconds": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Timestamp pretvoren u sekunde za programsko seekanje"
+          },
+          "speaker_id": {
+            "type": "string",
+            "description": "Referenca na ključ u speakers objektu",
+            "examples": ["nikola_skoric", "marko_skreb", "publika"]
+          },
+          "chapter": {
+            "type": "string",
+            "description": "Naziv poglavlja/sekcije kojoj screenshot pripada"
+          },
+          "chapter_id": {
+            "type": "integer",
+            "description": "Referenca na ID poglavlja u chapters arrayu"
+          },
+          "scene_description": {
+            "type": "string",
+            "description": "Opis scene/konteksta za screenshot (interno)"
+          },
+          "caption_hr": {
+            "type": "string",
+            "description": "Caption/opis na hrvatskom za overlay ili alt text"
+          },
+          "caption_en": {
+            "type": "string",
+            "description": "Caption/opis na engleskom (opcionalno)"
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$",
+            "description": "URL-safe slug opisa za naziv datoteke"
+          },
+          "is_priority": {
+            "type": "boolean",
+            "default": false,
+            "description": "Označava je li screenshot među prioritetnima (TOP 10)"
+          },
+          "priority_rank": {
+            "type": ["integer", "null"],
+            "minimum": 1,
+            "maximum": 10,
+            "description": "Rang prioriteta (1-10) ako je is_priority true, inače null"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9-]+$"
+            },
+            "description": "Lista tagova za kategorizaciju i filtriranje"
+          }
+        }
+      }
+    },
+    "priority_screenshots": {
+      "type": "array",
+      "description": "Izdvojeni TOP 10 najvažnijih screenshotova za brzi pristup",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": ["rank", "id", "timestamp", "filename", "description"],
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10,
+            "description": "Rang važnosti (1 = najvažniji)"
+          },
+          "id": {
+            "type": "integer",
+            "description": "Referenca na screenshot ID u screenshots arrayu"
+          },
+          "timestamp": {
+            "type": "string",
+            "pattern": "^[0-9]{2}:[0-9]{2}:[0-9]{2}$"
+          },
+          "filename": {
+            "type": "string",
+            "description": "Kopija naziva datoteke za brzi pristup"
+          },
+          "description": {
+            "type": "string",
+            "description": "Kratki opis za brzu identifikaciju"
+          }
+        }
+      }
+    },
+    "chapters": {
+      "type": "array",
+      "description": "Definicija poglavlja/sekcija video zapisa",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "start_timestamp"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Jedinstveni ID poglavlja"
+          },
+          "title": {
+            "type": "string",
+            "description": "Naslov poglavlja"
+          },
+          "start_timestamp": {
+            "type": "string",
+            "pattern": "^[0-9]{2}:[0-9]{2}:[0-9]{2}$",
+            "description": "Početni timestamp poglavlja"
+          },
+          "end_timestamp": {
+            "type": "string",
+            "pattern": "^[0-9]{2}:[0-9]{2}:[0-9]{2}$",
+            "description": "Završni timestamp poglavlja"
+          },
+          "description": {
+            "type": "string",
+            "description": "Opcionalni opis poglavlja"
+          }
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "metadata": {
+        "video_url": "https://www.youtube.com/watch?v=XXXXXXXXXXX",
+        "video_id": "XXXXXXXXXXX",
+        "video_title": "Primjer video naslova",
+        "total_screenshots": 10,
+        "language": "hr",
+        "output_directory": "screenshots",
+        "filename_format": "{index:02d}_{timestamp_clean}_{slug}.png"
+      },
+      "speakers": {
+        "speaker_1": {
+          "full_name": "Ime Prezime",
+          "role": "Uloga",
+          "color_code": "#00d4aa",
+          "slug": "prezime"
+        }
+      },
+      "screenshots": [
+        {
+          "id": 1,
+          "filename": "01_000000_prezime_uvod.png",
+          "timestamp": "00:00:00",
+          "timestamp_seconds": 0,
+          "speaker_id": "speaker_1",
+          "caption_hr": "Opis scene na hrvatskom",
+          "is_priority": true,
+          "priority_rank": 1,
+          "tags": ["uvod", "primjer"]
+        }
+      ],
+      "priority_screenshots": [
+        {
+          "rank": 1,
+          "id": 1,
+          "timestamp": "00:00:00",
+          "filename": "01_000000_prezime_uvod.png",
+          "description": "Kratki opis"
+        }
+      ],
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Uvod",
+          "start_timestamp": "00:00:00",
+          "end_timestamp": "00:05:00"
+        }
+      ]
+    }
+  ]
+}
