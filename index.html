@@ -568,6 +568,129 @@
             text-decoration: underline;
         }
 
+        /* Video Player Sticky */
+        .video-container {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--bg-primary);
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .video-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .video-frame {
+            position: relative;
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 16/9;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-info {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .video-info h3 {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .current-timestamp {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.25rem;
+        }
+
+        .current-speaker {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Screenshot in timeline */
+        .timeline-screenshot {
+            margin: 1rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-screenshot:hover {
+            border-color: var(--accent-blue);
+            transform: scale(1.02);
+        }
+
+        .timeline-screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .timeline-screenshot figcaption {
+            padding: 0.75rem 1rem;
+            background: var(--bg-secondary);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .timeline-screenshot figcaption .seek-icon {
+            color: var(--accent-blue);
+        }
+
+        /* Clickable timestamp */
+        .timestamp {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-left: auto;
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .timestamp:hover {
+            background: var(--glow-blue);
+            color: var(--accent-blue);
+        }
+
+        /* Active timeline item */
+        .timeline-item.active .timeline-card {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 20px var(--glow-blue);
+        }
+
+        .timeline-item.active::before {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 4px var(--glow-blue);
+            background: var(--accent-blue);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .timeline {
@@ -602,6 +725,18 @@
 
             .hero-meta {
                 gap: 1rem;
+            }
+
+            .video-wrapper {
+                flex-direction: column;
+            }
+
+            .video-frame {
+                max-width: 100%;
+            }
+
+            .video-info {
+                text-align: center;
             }
         }
     </style>
@@ -644,6 +779,20 @@
             </svg>
         </div>
     </section>
+
+    <!-- Video Player Sticky -->
+    <div class="video-container" id="videoContainer">
+        <div class="video-wrapper">
+            <div class="video-frame">
+                <div id="player"></div>
+            </div>
+            <div class="video-info">
+                <h3>Sada gledate</h3>
+                <div class="current-timestamp" id="currentTime">00:00:00</div>
+                <div class="current-speaker" id="currentSpeaker">Kliknite timestamp za seek</div>
+            </div>
+        </div>
+    </div>
 
     <!-- Speakers Section -->
     <section class="speakers-section">
@@ -699,12 +848,16 @@
             <div class="timeline-chapter">
                 <h3 class="chapter-title">1. Uvod i definicije</h3>
                 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="62">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag bozidar">Božidar Pavlović</span>
-                            <span class="timestamp">00:01:22</span>
+                            <span class="timestamp" onclick="seekTo(62)">00:01:02</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(62)">
+                            <img src="images/02_000102_pavlovic_otvara_diskusiju.png" alt="Božidar Pavlović otvara diskusiju" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Otvara diskusiju s napomenom da stavovi nisu službeni stavovi HNB-a niti ECB-a, već osobna mišljenja panelista.</p>
                             <p>Najavljuje tri recentna događaja:</p>
@@ -717,12 +870,16 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="180">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag nikola">Nikola Škorić</span>
-                            <span class="timestamp">00:02:10</span>
+                            <span class="timestamp" onclick="seekTo(180)">00:03:00</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(180)">
+                            <img src="images/05_000300_skoric_definicija_stablecoina.png" alt="Nikola Škorić definira stablecoin" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Objašnjava osnovnu definiciju stablecoina:</p>
                             <div class="quote highlight-green">
@@ -732,12 +889,16 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="494">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag marko">Marko Škreb</span>
-                            <span class="timestamp">00:06:14</span>
+                            <span class="timestamp" onclick="seekTo(494)">00:08:14</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(494)">
+                            <img src="images/10_000814_skreb_javni_privatni_novac.png" alt="Marko Škreb o javnom i privatnom novcu" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Objašnjava razliku između javnog i privatnog novca:</p>
                             <div class="quote highlight-purple">
@@ -758,12 +919,16 @@
             <div class="timeline-chapter">
                 <h3 class="chapter-title">2. Zašto stablecoini? Use cases</h3>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="609">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag nikola">Nikola Škorić</span>
-                            <span class="timestamp">00:07:56</span>
+                            <span class="timestamp" onclick="seekTo(609)">00:10:09</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(609)">
+                            <img src="images/12_001009_skoric_stablecoini_presli_visu.png" alt="Škorić: Stablecoini prešli Visu" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Ključna izjava - Klikni za skok</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Argumentira poslovnu priliku:</p>
                             <div class="quote highlight-green">
@@ -774,12 +939,16 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="641">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag nikola">Nikola Škorić</span>
-                            <span class="timestamp">00:10:47</span>
+                            <span class="timestamp" onclick="seekTo(641)">00:10:41</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(641)">
+                            <img src="images/13_001041_skoric_puno_novca.png" alt="Škorić: Ima puno novca" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Opisuje praktične prednosti:</p>
                             <div class="quote highlight-green">
@@ -789,12 +958,16 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="1129">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag marko">Marko Škreb</span>
-                            <span class="timestamp">00:16:49</span>
+                            <span class="timestamp" onclick="seekTo(1129)">00:18:49</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(1129)">
+                            <img src="images/17_001849_skreb_transakcije_sekunde.png" alt="Škreb: Transakcije u sekundama" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Priznaje konkretne prednosti stablecoina:</p>
                             <div class="quote highlight-purple">
@@ -804,34 +977,22 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-card">
-                        <div class="timeline-card-header">
-                            <span class="speaker-tag nikola">Nikola Škorić</span>
-                            <span class="timestamp">00:12:04</span>
-                        </div>
-                        <div class="timeline-card-content">
-                            <p>Primjer Western Uniona:</p>
-                            <div class="quote highlight-green">
-                                "Western Union je u određenom segmentu tržišta monopolist. Radi se o tehnološkom dinosauru. I oni sad izdaju svoj stablecoin - vijest od pred mjesec dana."
-                            </div>
-                            <p>Ističe da čak i konzervativne kompanije ulaze u ovu tehnologiju.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Chapter 3: Yield i regulacija -->
             <div class="timeline-chapter">
                 <h3 class="chapter-title">3. Yield, DeFi i pitanje regulacije</h3>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="1264">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag nikola">Nikola Škorić</span>
-                            <span class="timestamp">00:19:04</span>
+                            <span class="timestamp" onclick="seekTo(1264)">00:21:04</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(1264)">
+                            <img src="images/20_002104_skoric_defi_vault_625.png" alt="Škorić: DeFi vault 6.25%" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Objašnjava kako funkcionira yield u DeFi-ju:</p>
                             <div class="quote highlight-green">
@@ -842,12 +1003,16 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="1222">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag marko">Marko Škreb</span>
-                            <span class="timestamp">00:18:22</span>
+                            <span class="timestamp" onclick="seekTo(1222)">00:20:22</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(1222)">
+                            <img src="images/19_002022_skreb_mica_zabranjuje_kamatu.png" alt="Škreb: MiCA zabranjuje kamate" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Potvrđuje regulatorne restrikcije:</p>
                             <div class="quote highlight-purple">
@@ -862,28 +1027,36 @@
             <div class="timeline-chapter">
                 <h3 class="chapter-title">4. Tether - crna ovca industrije</h3>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="1575">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag marko">Marko Škreb</span>
-                            <span class="timestamp">00:24:15</span>
+                            <span class="timestamp" onclick="seekTo(1575)">00:26:15</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(1575)">
+                            <img src="images/22_002615_skreb_tether_sp_junk.png" alt="Škreb: Tether junk rating" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Ključna izjava - Klikni za skok</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Kritizira netransparentnost Tethera:</p>
                             <div class="quote highlight-purple">
                                 "Pred tri dana je S&P smanjio ocjenu Tethera na najnižu moguću razinu, praktički na junk. Zašto? Zato što Tether nikad nije objavio revidiranu bilancu. A ima 180 milijardi dolara."
                             </div>
-                            <p>Napominje da je Tether osnovan na British Virgin Islandu, a u siječnju preselio u El Salvador. Također spominje donaciju za rušenje istočnog krila Bijele kuće.</p>
+                            <p>Napominje da je Tether osnovan na British Virgin Islandu, a u siječnju preselio u El Salvador.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="1656">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag marko">Marko Škreb</span>
-                            <span class="timestamp">00:25:48</span>
+                            <span class="timestamp" onclick="seekTo(1656)">00:27:36</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(1656)">
+                            <img src="images/23_002736_skreb_bih_valutni_odbor.png" alt="Škreb: BiH valutni odbor" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Daje primjer funkcionirajućeg sustava povjerenja:</p>
                             <div class="quote highlight-purple">
@@ -893,12 +1066,16 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="1707">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
-                            <span class="speaker-tag nikola">Nikola Škorić</span>
-                            <span class="timestamp">00:32:00</span>
+                            <span class="speaker-tag marko">Marko Škreb</span>
+                            <span class="timestamp" onclick="seekTo(1707)">00:28:27</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(1707)">
+                            <img src="images/24_002827_skreb_tether_bijela_kuca.png" alt="Škreb: Tether i Bijela kuća" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Daje predikciju za Tether:</p>
                             <div class="quote highlight-green">
@@ -914,28 +1091,16 @@
             <div class="timeline-chapter">
                 <h3 class="chapter-title">5. Regulirani vs. neregulirani stablecoini</h3>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="2320">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag nikola">Nikola Škorić</span>
-                            <span class="timestamp">00:44:18</span>
+                            <span class="timestamp" onclick="seekTo(2320)">00:38:40</span>
                         </div>
-                        <div class="timeline-card-content">
-                            <p>Objašnjava europsku regulaciju:</p>
-                            <div class="quote highlight-green">
-                                "Da biste izdali stablecoin u Europi prema MiCA regulativi, morate imati licencu za elektronički novac. U Hrvatskoj ih ima 7-8 takvih institucija. Regulira ih HNB. Svaki euro koji je vani - postoji negdje. Nema netransparentnosti."
-                            </div>
-                            <p>Daje primjer Aircasha: ako izgubite povjerenje, jednostavno prebacite novce u banku jer je sve pokriveno kolateralom.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-card">
-                        <div class="timeline-card-header">
-                            <span class="speaker-tag nikola">Nikola Škorić</span>
-                            <span class="timestamp">00:38:40</span>
-                        </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(2320)">
+                            <img src="images/30_003840_skoric_100_posto_pokrice.png" alt="Škorić: 100% pokriće" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Uspoređuje pokriće banaka i stablecoina:</p>
                             <div class="quote highlight-green">
@@ -945,17 +1110,41 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="2580">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag marko">Marko Škreb</span>
-                            <span class="timestamp">00:43:00</span>
+                            <span class="timestamp" onclick="seekTo(2580)">00:43:00</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(2580)">
+                            <img src="images/34_004300_skreb_centralna_banka_likvidnost.png" alt="Škreb: Centralna banka i likvidnost" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Ističe prednost bankarskog sustava:</p>
                             <div class="quote highlight-purple">
                                 "Za razliku od nebankarskog sektora, u bankarstvu imate centralnu banku koja može dodati likvidnosti koliko god treba - neograničeno. To se zove Open Market Operations. Za individualne institucije postoji zajmodavac u zadnjoj nuždi. Toga kod stablecoina nema."
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-time="2745">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag nikola">Nikola Škorić</span>
+                            <span class="timestamp" onclick="seekTo(2745)">00:45:45</span>
+                        </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(2745)">
+                            <img src="images/37_004545_skoric_aircash_primjer.png" alt="Škorić: Aircash primjer" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
+                        <div class="timeline-card-content">
+                            <p>Objašnjava europsku regulaciju:</p>
+                            <div class="quote highlight-green">
+                                "Da biste izdali stablecoin u Europi prema MiCA regulativi, morate imati licencu za elektronički novac. U Hrvatskoj ih ima 7-8 takvih institucija. Regulira ih HNB. Svaki euro koji je vani - postoji negdje. Nema netransparentnosti."
+                            </div>
+                            <p>Daje primjer Aircasha: ako izgubite povjerenje, jednostavno prebacite novce u banku jer je sve pokriveno kolateralom.</p>
                         </div>
                     </div>
                 </div>
@@ -965,12 +1154,16 @@
             <div class="timeline-chapter">
                 <h3 class="chapter-title">6. Slučaj Silicon Valley Bank</h3>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="2309">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag nikola">Nikola Škorić</span>
-                            <span class="timestamp">00:37:35</span>
+                            <span class="timestamp" onclick="seekTo(2309)">00:38:29</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(2309)">
+                            <img src="images/29_003829_skoric_problem_je_banka.png" alt="Škorić: Problem je u banci" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Ključna izjava - Klikni za skok</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Analizira SVB kolaps:</p>
                             <div class="quote highlight-green">
@@ -986,12 +1179,16 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="4130">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag vedran">Vedran Šošić (HNB)</span>
-                            <span class="timestamp">01:02:05</span>
+                            <span class="timestamp" onclick="seekTo(4130)">01:08:50</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(4130)">
+                            <img src="images/48_010850_sosic_svb_obveznice.png" alt="Šošić: SVB i obveznice" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Daje detaljniju analizu SVB slučaja:</p>
                             <div class="quote highlight-orange">
@@ -1007,12 +1204,16 @@
             <div class="timeline-chapter">
                 <h3 class="chapter-title">7. "Dinamit u temeljima bankarstva"</h3>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="4173">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag vedran">Vedran Šošić (HNB)</span>
-                            <span class="timestamp">01:03:33</span>
+                            <span class="timestamp" onclick="seekTo(4173)">01:09:33</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(4173)">
+                            <img src="images/49_010933_sosic_dinamit_temeljima.png" alt="Šošić: Dinamit u temeljima" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Ključna izjava - Klikni za skok</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Objašnjava zabrinutost ECB-a:</p>
                             <div class="quote highlight-orange">
@@ -1023,12 +1224,16 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="4285">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag nikola">Nikola Škorić</span>
-                            <span class="timestamp">01:05:29</span>
+                            <span class="timestamp" onclick="seekTo(4285)">01:11:25</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(4285)">
+                            <img src="images/51_011125_skoric_mica_60_posto_pitanje.png" alt="Škorić: MiCA 60% pitanje" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Postavlja pitanje o MiCA regulativi:</p>
                             <div class="quote highlight-green">
@@ -1038,12 +1243,16 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="4481">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag publika">Filip Šaravanja (publika)</span>
-                            <span class="timestamp">01:08:41</span>
+                            <span class="timestamp" onclick="seekTo(4481)">01:14:41</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(4481)">
+                            <img src="images/52_011441_publika_350m_dinamit.png" alt="Publika: 350 milijuna dinamit?" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Dovodi u pitanje razmjere:</p>
                             <div class="quote">
@@ -1058,12 +1267,16 @@
             <div class="timeline-chapter">
                 <h3 class="chapter-title">8. Rizik dolarizacije Europe</h3>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="2013">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag marko">Marko Škreb</span>
-                            <span class="timestamp">00:36:08</span>
+                            <span class="timestamp" onclick="seekTo(2013)">00:33:33</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(2013)">
+                            <img src="images/25_003333_skreb_dolarizacija_svijeta.png" alt="Škreb: Dolarizacija svijeta" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Ključna izjava - Klikni za skok</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Citira upozorenje András Treichla (bivši CEO Erste):</p>
                             <div class="quote highlight-purple">
@@ -1073,12 +1286,16 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="2478">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag nikola">Nikola Škorić</span>
-                            <span class="timestamp">00:41:36</span>
+                            <span class="timestamp" onclick="seekTo(2478)">00:41:18</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(2478)">
+                            <img src="images/32_004118_skoric_zasto_propao_libra.png" alt="Škorić: America innovates, Europe regulates" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Ključna izjava - Klikni za skok</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Upozorava na posljedice pretjerane regulacije:</p>
                             <div class="quote highlight-green">
@@ -1099,12 +1316,16 @@
             <div class="timeline-chapter">
                 <h3 class="chapter-title">9. Zašto banke moraju ući u stablecoin biznis</h3>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="4579">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag josip">Josip Majher (HPB)</span>
-                            <span class="timestamp">01:09:46</span>
+                            <span class="timestamp" onclick="seekTo(4579)">01:16:19</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(4579)">
+                            <img src="images/54_011619_majher_fed_waller_monopol.png" alt="Majher citira Fed: Ne trebamo monopol" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Ključna izjava - Klikni za skok</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Izvještava sa Sibos konferencije u Frankfurtu:</p>
                             <div class="quote" style="border-left-color: var(--accent-cyan); background: rgba(34, 211, 238, 0.05);">
@@ -1115,12 +1336,16 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="4633">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag josip">Josip Majher (HPB)</span>
-                            <span class="timestamp">01:11:13</span>
+                            <span class="timestamp" onclick="seekTo(4633)">01:17:13</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(4633)">
+                            <img src="images/56_011713_majher_zasto_banke_ulaze.png" alt="Majher: Zašto banke ulaze" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Ključna izjava - Klikni za skok</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Objašnjava motivaciju banaka:</p>
                             <div class="quote" style="border-left-color: var(--accent-cyan); background: rgba(34, 211, 238, 0.05);">
@@ -1136,12 +1361,16 @@
             <div class="timeline-chapter">
                 <h3 class="chapter-title">10. Zaključak i poziv na akciju</h3>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="3641">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
                             <span class="speaker-tag nikola">Nikola Škorić</span>
-                            <span class="timestamp">00:53:54</span>
+                            <span class="timestamp" onclick="seekTo(3641)">01:00:41</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(3641)">
+                            <img src="images/41_010041_skoric_porazimo_amerikance.png" alt="Škorić: Porazimo Amerikance" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Ključna izjava - Klikni za skok</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
                             <p>Završna poruka - potencijal Europe:</p>
                             <div class="quote highlight-green">
@@ -1151,16 +1380,20 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="4768">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
-                            <span class="speaker-tag nikola">Nikola Škorić</span>
-                            <span class="timestamp">00:55:08</span>
+                            <span class="speaker-tag bozidar">Božidar Pavlović</span>
+                            <span class="timestamp" onclick="seekTo(4768)">01:19:28</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(4768)">
+                            <img src="images/58_011928_pavlovic_zakljucak.png" alt="Pavlović: Zaključak" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
-                            <p>Vizija suradnje:</p>
-                            <div class="quote highlight-green">
-                                "Pričamo o tome da su stablecoini prešli Visu, a to je industrija koja je do pred godinu dana bila prosta riječ u bankarskim krugovima. Bili smo 'dečki s ulice'. Što će se desiti kad banke i naša industrija zajedno upregnu? Mislim da imamo veliku priliku."
+                            <p>Zaključak moderatora:</p>
+                            <div class="quote">
+                                "Zaključak je da nam treba ovakav dijalog, treba nam ga sve više. Treba nam uključenje iskustva i optimizma. Hrvatska ima veliku ulogu u svemu tome i trebala bi imati."
                             </div>
                             <div class="key-point">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -1172,17 +1405,18 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item" data-time="4887">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
-                            <span class="speaker-tag bozidar">Božidar Pavlović</span>
-                            <span class="timestamp">01:15:27</span>
+                            <span class="speaker-tag publika">Svi panelisti</span>
+                            <span class="timestamp" onclick="seekTo(4887)">01:21:27</span>
                         </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(4887)">
+                            <img src="images/59_012127_zavrsni_pljesak.png" alt="Završni pljesak" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Završna scena - Klikni za skok</figcaption>
+                        </figure>
                         <div class="timeline-card-content">
-                            <p>Zaključak moderatora:</p>
-                            <div class="quote">
-                                "Zaključak je da nam treba ovakav dijalog, treba nam ga sve više. Treba nam uključenje iskustva i optimizma. Hrvatska ima veliku ulogu u svemu tome i trebala bi imati."
-                            </div>
+                            <p>Panel završava pozivom na suradnju banaka i kripto industrije.</p>
                         </div>
                     </div>
                 </div>
@@ -1237,6 +1471,107 @@
     </footer>
 
     <script>
+        // YouTube IFrame API
+        let player;
+        let playerReady = false;
+
+        // Load the IFrame Player API code asynchronously
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Create YouTube player when API is ready
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '100%',
+                width: '100%',
+                videoId: 'Er5CcLF4xyg',
+                playerVars: {
+                    'playsinline': 1,
+                    'rel': 0,
+                    'modestbranding': 1
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            playerReady = true;
+            // Start updating time display
+            setInterval(updateTimeDisplay, 500);
+        }
+
+        function onPlayerStateChange(event) {
+            // Update active timeline item when video plays
+            if (event.data === YT.PlayerState.PLAYING) {
+                updateActiveTimelineItem();
+            }
+        }
+
+        // Seek to specific time in seconds
+        function seekTo(seconds) {
+            if (playerReady && player) {
+                player.seekTo(seconds, true);
+                player.playVideo();
+                // Scroll video container into view
+                document.getElementById('videoContainer').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Format seconds to HH:MM:SS
+        function formatTime(seconds) {
+            const h = Math.floor(seconds / 3600);
+            const m = Math.floor((seconds % 3600) / 60);
+            const s = Math.floor(seconds % 60);
+            return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        }
+
+        // Update time display
+        function updateTimeDisplay() {
+            if (playerReady && player && player.getCurrentTime) {
+                const currentTime = player.getCurrentTime();
+                document.getElementById('currentTime').textContent = formatTime(currentTime);
+                updateActiveTimelineItem(currentTime);
+            }
+        }
+
+        // Update which timeline item is active based on current time
+        function updateActiveTimelineItem(currentTime) {
+            if (!currentTime && playerReady && player) {
+                currentTime = player.getCurrentTime();
+            }
+            if (!currentTime) return;
+
+            const items = document.querySelectorAll('.timeline-item[data-time]');
+            let activeItem = null;
+            let activeSpeaker = '';
+
+            items.forEach(item => {
+                const itemTime = parseInt(item.dataset.time);
+                item.classList.remove('active');
+
+                if (itemTime <= currentTime) {
+                    activeItem = item;
+                    const speakerTag = item.querySelector('.speaker-tag');
+                    if (speakerTag) {
+                        activeSpeaker = speakerTag.textContent;
+                    }
+                }
+            });
+
+            if (activeItem) {
+                activeItem.classList.add('active');
+                document.getElementById('currentSpeaker').textContent = activeSpeaker;
+            }
+        }
+
         // Intersection Observer for scroll animations
         const observerOptions = {
             root: null,
@@ -1259,8 +1594,8 @@
 
         // Smooth scroll for scroll indicator
         document.querySelector('.scroll-indicator')?.addEventListener('click', () => {
-            document.querySelector('.speakers-section').scrollIntoView({ 
-                behavior: 'smooth' 
+            document.querySelector('.speakers-section').scrollIntoView({
+                behavior: 'smooth'
             });
         });
     </script>
