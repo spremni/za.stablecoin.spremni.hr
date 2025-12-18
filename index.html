@@ -1631,6 +1631,12 @@
                     lastActiveItemTime = seconds;
                 }
 
+                // Pause auto-scroll temporarily after manual click
+                autoScrollPaused = true;
+                setTimeout(() => {
+                    autoScrollPaused = false;
+                }, 3000);
+
                 // Scroll video container into view
                 document.getElementById('videoContainer').scrollIntoView({
                     behavior: 'smooth',
@@ -1658,6 +1664,7 @@
 
         // Track the last active item to detect changes
         let lastActiveItemTime = null;
+        let autoScrollPaused = false;
 
         // Update which timeline item is active based on current time
         function updateActiveTimelineItem(currentTime) {
@@ -1693,20 +1700,23 @@
                 if (activeItemTime !== lastActiveItemTime) {
                     lastActiveItemTime = activeItemTime;
 
-                    // Scroll the timeline item into view with offset for sticky video
-                    const videoContainer = document.getElementById('videoContainer');
-                    const videoHeight = videoContainer ? videoContainer.offsetHeight : 0;
+                    // Only auto-scroll if not paused (after manual click)
+                    if (!autoScrollPaused) {
+                        // Scroll the timeline item into view with offset for sticky video
+                        const videoContainer = document.getElementById('videoContainer');
+                        const videoHeight = videoContainer ? videoContainer.offsetHeight : 0;
 
-                    const itemRect = activeItem.getBoundingClientRect();
-                    const isInViewport = itemRect.top >= videoHeight + 20 && itemRect.bottom <= window.innerHeight - 20;
+                        const itemRect = activeItem.getBoundingClientRect();
+                        const isInViewport = itemRect.top >= videoHeight + 20 && itemRect.bottom <= window.innerHeight - 20;
 
-                    if (!isInViewport) {
-                        // Calculate scroll position accounting for sticky video player
-                        const scrollTop = window.pageYOffset + itemRect.top - videoHeight - 40;
-                        window.scrollTo({
-                            top: scrollTop,
-                            behavior: 'smooth'
-                        });
+                        if (!isInViewport) {
+                            // Calculate scroll position accounting for sticky video player
+                            const scrollTop = window.pageYOffset + itemRect.top - videoHeight - 40;
+                            window.scrollTo({
+                                top: scrollTop,
+                                behavior: 'smooth'
+                            });
+                        }
                     }
                 }
             }
