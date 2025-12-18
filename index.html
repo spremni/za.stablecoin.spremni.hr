@@ -1626,6 +1626,9 @@
                     // Mark as active
                     document.querySelectorAll('.timeline-item').forEach(item => item.classList.remove('active'));
                     targetItem.classList.add('active');
+
+                    // Reset auto-scroll tracker to this position
+                    lastActiveItemTime = seconds;
                 }
 
                 // Scroll video container into view
@@ -1653,6 +1656,9 @@
             }
         }
 
+        // Track the last active item to detect changes
+        let lastActiveItemTime = null;
+
         // Update which timeline item is active based on current time
         function updateActiveTimelineItem(currentTime) {
             if (!currentTime && playerReady && player) {
@@ -1663,6 +1669,7 @@
             const items = document.querySelectorAll('.timeline-item[data-time]');
             let activeItem = null;
             let activeSpeaker = '';
+            let activeItemTime = null;
 
             items.forEach(item => {
                 const itemTime = parseInt(item.dataset.time);
@@ -1670,6 +1677,7 @@
 
                 if (itemTime <= currentTime) {
                     activeItem = item;
+                    activeItemTime = itemTime;
                     const speakerTag = item.querySelector('.speaker-tag');
                     if (speakerTag) {
                         activeSpeaker = speakerTag.textContent;
@@ -1680,6 +1688,27 @@
             if (activeItem) {
                 activeItem.classList.add('active');
                 document.getElementById('currentSpeaker').textContent = activeSpeaker;
+
+                // Auto-scroll to new active item when it changes
+                if (activeItemTime !== lastActiveItemTime) {
+                    lastActiveItemTime = activeItemTime;
+
+                    // Scroll the timeline item into view with offset for sticky video
+                    const videoContainer = document.getElementById('videoContainer');
+                    const videoHeight = videoContainer ? videoContainer.offsetHeight : 0;
+
+                    const itemRect = activeItem.getBoundingClientRect();
+                    const isInViewport = itemRect.top >= videoHeight + 20 && itemRect.bottom <= window.innerHeight - 20;
+
+                    if (!isInViewport) {
+                        // Calculate scroll position accounting for sticky video player
+                        const scrollTop = window.pageYOffset + itemRect.top - videoHeight - 40;
+                        window.scrollTo({
+                            top: scrollTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
             }
         }
 
