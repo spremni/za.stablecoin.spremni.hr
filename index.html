@@ -1615,6 +1615,19 @@
             if (playerReady && player) {
                 player.seekTo(seconds, true);
                 player.playVideo();
+
+                // Immediately update speaker name for the clicked time
+                const targetItem = document.querySelector(`.timeline-item[data-time="${seconds}"]`);
+                if (targetItem) {
+                    const speakerTag = targetItem.querySelector('.speaker-tag');
+                    if (speakerTag) {
+                        document.getElementById('currentSpeaker').textContent = speakerTag.textContent;
+                    }
+                    // Mark as active
+                    document.querySelectorAll('.timeline-item').forEach(item => item.classList.remove('active'));
+                    targetItem.classList.add('active');
+                }
+
                 // Scroll video container into view
                 document.getElementById('videoContainer').scrollIntoView({
                     behavior: 'smooth',
