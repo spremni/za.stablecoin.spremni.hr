@@ -722,6 +722,67 @@
             background: var(--accent-blue);
         }
 
+        /* Thumbnail Sidebar Navigation */
+        .thumb-nav {
+            position: fixed;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            max-height: 70vh;
+            overflow-y: auto;
+            padding: 8px;
+            background: rgba(10, 10, 15, 0.95);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            scrollbar-width: thin;
+            scrollbar-color: var(--border-color) transparent;
+        }
+
+        .thumb-nav::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .thumb-nav::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 2px;
+        }
+
+        .thumb-item {
+            width: 60px;
+            height: 34px;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+            opacity: 0.6;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .thumb-item:hover {
+            opacity: 1;
+            border-color: var(--text-muted);
+        }
+
+        .thumb-item.active {
+            opacity: 1;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 10px var(--glow-blue);
+        }
+
+        .thumb-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .timeline {
@@ -807,6 +868,21 @@
 
             .timeline-card-content {
                 order: 1;
+            }
+
+            /* Mobile thumbnail nav */
+            .thumb-nav {
+                right: 5px;
+                padding: 4px;
+                gap: 4px;
+                max-height: 60vh;
+            }
+
+            .thumb-item {
+                width: 32px;
+                height: 18px;
+                border-radius: 4px;
+                border-width: 1px;
             }
         }
     </style>
@@ -1556,6 +1632,88 @@
         </div>
     </section>
 
+    <!-- Thumbnail Sidebar Navigation -->
+    <nav class="thumb-nav" id="thumbNav">
+        <div class="thumb-item" data-time="62" onclick="seekTo(62)">
+            <img src="images/02_000102_pavlovic_otvara_diskusiju.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="180" onclick="seekTo(180)">
+            <img src="images/05_000300_skoric_definicija_stablecoina.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="494" onclick="seekTo(494)">
+            <img src="images/10_000814_skreb_javni_privatni_novac.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="609" onclick="seekTo(609)">
+            <img src="images/12_001009_skoric_stablecoini_presli_visu.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="641" onclick="seekTo(641)">
+            <img src="images/13_001041_skoric_puno_novca.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="1129" onclick="seekTo(1129)">
+            <img src="images/17_001849_skreb_transakcije_sekunde.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="1264" onclick="seekTo(1264)">
+            <img src="images/20_002104_skoric_defi_vault_625.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="1222" onclick="seekTo(1222)">
+            <img src="images/19_002022_skreb_mica_zabranjuje_kamatu.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="1575" onclick="seekTo(1575)">
+            <img src="images/22_002615_skreb_tether_sp_junk.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="1656" onclick="seekTo(1656)">
+            <img src="images/23_002736_skreb_bih_valutni_odbor.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="1707" onclick="seekTo(1707)">
+            <img src="images/24_002827_skreb_tether_bijela_kuca.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="2013" onclick="seekTo(2013)">
+            <img src="images/25_003333_skreb_dolarizacija_svijeta.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="2309" onclick="seekTo(2309)">
+            <img src="images/29_003829_skoric_problem_je_banka.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="2320" onclick="seekTo(2320)">
+            <img src="images/30_003840_skoric_100_posto_pokrice.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="2478" onclick="seekTo(2478)">
+            <img src="images/32_004118_skoric_zasto_propao_libra.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="2580" onclick="seekTo(2580)">
+            <img src="images/34_004300_skreb_centralna_banka_likvidnost.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="2745" onclick="seekTo(2745)">
+            <img src="images/37_004545_skoric_aircash_primjer.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="3641" onclick="seekTo(3641)">
+            <img src="images/41_010041_skoric_porazimo_amerikance.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="4130" onclick="seekTo(4130)">
+            <img src="images/48_010850_sosic_svb_obveznice.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="4173" onclick="seekTo(4173)">
+            <img src="images/49_010933_sosic_dinamit_temeljima.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="4285" onclick="seekTo(4285)">
+            <img src="images/51_011125_skoric_mica_60_posto_pitanje.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="4481" onclick="seekTo(4481)">
+            <img src="images/52_011441_publika_350m_dinamit.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="4579" onclick="seekTo(4579)">
+            <img src="images/54_011619_majher_fed_waller_monopol.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="4633" onclick="seekTo(4633)">
+            <img src="images/56_011713_majher_zasto_banke_ulaze.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="4768" onclick="seekTo(4768)">
+            <img src="images/58_011928_pavlovic_zakljucak.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="4887" onclick="seekTo(4887)">
+            <img src="images/59_012127_zavrsni_pljesak.png" alt="" loading="lazy">
+        </div>
+    </nav>
+
     <!-- Footer -->
     <footer class="footer">
         <p>
@@ -1631,6 +1789,9 @@
                     lastActiveItemTime = seconds;
                 }
 
+                // Update thumbnail nav active state
+                updateThumbNavActive(seconds);
+
                 // Pause auto-scroll temporarily after manual click
                 autoScrollPaused = true;
                 setTimeout(() => {
@@ -1696,6 +1857,9 @@
                 activeItem.classList.add('active');
                 document.getElementById('currentSpeaker').textContent = activeSpeaker;
 
+                // Update thumbnail nav active state
+                updateThumbNavActive(activeItemTime);
+
                 // Auto-scroll to new active item when it changes
                 if (activeItemTime !== lastActiveItemTime) {
                     lastActiveItemTime = activeItemTime;
@@ -1719,6 +1883,30 @@
                         }
                     }
                 }
+            }
+        }
+
+        // Update thumbnail navigation active state
+        function updateThumbNavActive(currentTime) {
+            const thumbItems = document.querySelectorAll('.thumb-item[data-time]');
+            let activeThumb = null;
+
+            thumbItems.forEach(thumb => {
+                const thumbTime = parseInt(thumb.dataset.time);
+                thumb.classList.remove('active');
+
+                if (thumbTime <= currentTime) {
+                    activeThumb = thumb;
+                }
+            });
+
+            if (activeThumb) {
+                activeThumb.classList.add('active');
+                // Scroll active thumb into view within the nav
+                activeThumb.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest'
+                });
             }
         }
 
