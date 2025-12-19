@@ -1875,14 +1875,17 @@
             let activeItem = null;
             let activeSpeaker = '';
             let activeItemTime = null;
+            let highestMatchingTime = -1;
 
             items.forEach(item => {
                 const itemTime = parseInt(item.dataset.time);
                 item.classList.remove('active');
 
-                if (itemTime <= currentTime) {
+                // Find the item with the highest time that is <= currentTime
+                if (itemTime <= currentTime && itemTime > highestMatchingTime) {
                     activeItem = item;
                     activeItemTime = itemTime;
+                    highestMatchingTime = itemTime;
                     const speakerTag = item.querySelector('.speaker-tag');
                     if (speakerTag) {
                         activeSpeaker = speakerTag.textContent;
@@ -1927,23 +1930,21 @@
         function updateThumbNavActive(currentTime) {
             const thumbItems = document.querySelectorAll('.thumb-item[data-time]');
             let activeThumb = null;
+            let highestMatchingTime = -1;
 
             thumbItems.forEach(thumb => {
                 const thumbTime = parseInt(thumb.dataset.time);
                 thumb.classList.remove('active');
 
-                if (thumbTime <= currentTime) {
+                // Find the thumb with the highest time that is <= currentTime
+                if (thumbTime <= currentTime && thumbTime > highestMatchingTime) {
                     activeThumb = thumb;
+                    highestMatchingTime = thumbTime;
                 }
             });
 
             if (activeThumb) {
                 activeThumb.classList.add('active');
-                // Auto-scroll disabled for thumb-nav
-                // activeThumb.scrollIntoView({
-                //     behavior: 'smooth',
-                //     block: 'nearest'
-                // });
             }
         }
 
