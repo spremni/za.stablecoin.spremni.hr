@@ -783,6 +783,23 @@
             pointer-events: none;
         }
 
+        .thumb-separator {
+            width: 100%;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--accent-blue);
+            padding: 4px 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .thumb-separator:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .timeline {
@@ -1154,6 +1171,25 @@
             <div class="timeline-chapter">
                 <h3 class="chapter-title">3. Yield, DeFi i pitanje regulacije</h3>
 
+                <div class="timeline-item" data-time="1222">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="speaker-tag marko">Marko Škreb</span>
+                            <span class="timestamp" onclick="seekTo(1222)">00:20:22</span>
+                        </div>
+                        <figure class="timeline-screenshot" onclick="seekTo(1222)">
+                            <img src="images/19_002022_skreb_mica_zabranjuje_kamatu.png" alt="Škreb: MiCA zabranjuje kamate" loading="lazy">
+                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
+                        </figure>
+                        <div class="timeline-card-content">
+                            <p>Potvrđuje regulatorne restrikcije:</p>
+                            <div class="quote highlight-purple">
+                                "I u Americi i u Europi - i Genius Act i MiCA zabranjuju davanje kamata na stablecoine."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="timeline-item" data-time="1264">
                     <div class="timeline-card">
                         <div class="timeline-card-header">
@@ -1170,25 +1206,6 @@
                                 "Ja svoju ušteđevinu ne držim na banci, nego u stablecoinima u vaultu - smart contractu. Zadnji izračun: dobivam 6,25%. Smart contracti pružaju moju likvidnost za tradanje, održavanje kolaterala, decentralizirane burze..."
                             </div>
                             <p>Napominje da su takvi yield-bearing proizvodi u Europi ilegalni prema MiCA regulativi.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-time="1222">
-                    <div class="timeline-card">
-                        <div class="timeline-card-header">
-                            <span class="speaker-tag marko">Marko Škreb</span>
-                            <span class="timestamp" onclick="seekTo(1222)">00:20:22</span>
-                        </div>
-                        <figure class="timeline-screenshot" onclick="seekTo(1222)">
-                            <img src="images/19_002022_skreb_mica_zabranjuje_kamatu.png" alt="Škreb: MiCA zabranjuje kamate" loading="lazy">
-                            <figcaption><span class="seek-icon">▶</span> Klikni za skok na ovaj trenutak</figcaption>
-                        </figure>
-                        <div class="timeline-card-content">
-                            <p>Potvrđuje regulatorne restrikcije:</p>
-                            <div class="quote highlight-purple">
-                                "I u Americi i u Europi - i Genius Act i MiCA zabranjuju davanje kamata na stablecoine."
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1634,6 +1651,8 @@
 
     <!-- Thumbnail Sidebar Navigation -->
     <nav class="thumb-nav" id="thumbNav">
+        <!-- Chapter 1: Uvod -->
+        <div class="thumb-separator">1</div>
         <div class="thumb-item" data-time="62" onclick="seekTo(62)">
             <img src="images/02_000102_pavlovic_otvara_diskusiju.png" alt="" loading="lazy">
         </div>
@@ -1643,6 +1662,8 @@
         <div class="thumb-item" data-time="494" onclick="seekTo(494)">
             <img src="images/10_000814_skreb_javni_privatni_novac.png" alt="" loading="lazy">
         </div>
+        <!-- Chapter 2: Use cases -->
+        <div class="thumb-separator">2</div>
         <div class="thumb-item" data-time="609" onclick="seekTo(609)">
             <img src="images/12_001009_skoric_stablecoini_presli_visu.png" alt="" loading="lazy">
         </div>
@@ -1652,12 +1673,16 @@
         <div class="thumb-item" data-time="1129" onclick="seekTo(1129)">
             <img src="images/17_001849_skreb_transakcije_sekunde.png" alt="" loading="lazy">
         </div>
-        <div class="thumb-item" data-time="1264" onclick="seekTo(1264)">
-            <img src="images/20_002104_skoric_defi_vault_625.png" alt="" loading="lazy">
-        </div>
+        <!-- Chapter 3: Yield i regulacija -->
+        <div class="thumb-separator">3</div>
         <div class="thumb-item" data-time="1222" onclick="seekTo(1222)">
             <img src="images/19_002022_skreb_mica_zabranjuje_kamatu.png" alt="" loading="lazy">
         </div>
+        <div class="thumb-item" data-time="1264" onclick="seekTo(1264)">
+            <img src="images/20_002104_skoric_defi_vault_625.png" alt="" loading="lazy">
+        </div>
+        <!-- Chapter 4: Tether -->
+        <div class="thumb-separator">4</div>
         <div class="thumb-item" data-time="1575" onclick="seekTo(1575)">
             <img src="images/22_002615_skreb_tether_sp_junk.png" alt="" loading="lazy">
         </div>
@@ -1667,17 +1692,10 @@
         <div class="thumb-item" data-time="1707" onclick="seekTo(1707)">
             <img src="images/24_002827_skreb_tether_bijela_kuca.png" alt="" loading="lazy">
         </div>
-        <div class="thumb-item" data-time="2013" onclick="seekTo(2013)">
-            <img src="images/25_003333_skreb_dolarizacija_svijeta.png" alt="" loading="lazy">
-        </div>
-        <div class="thumb-item" data-time="2309" onclick="seekTo(2309)">
-            <img src="images/29_003829_skoric_problem_je_banka.png" alt="" loading="lazy">
-        </div>
+        <!-- Chapter 5: Regulirani vs neregulirani -->
+        <div class="thumb-separator">5</div>
         <div class="thumb-item" data-time="2320" onclick="seekTo(2320)">
             <img src="images/30_003840_skoric_100_posto_pokrice.png" alt="" loading="lazy">
-        </div>
-        <div class="thumb-item" data-time="2478" onclick="seekTo(2478)">
-            <img src="images/32_004118_skoric_zasto_propao_libra.png" alt="" loading="lazy">
         </div>
         <div class="thumb-item" data-time="2580" onclick="seekTo(2580)">
             <img src="images/34_004300_skreb_centralna_banka_likvidnost.png" alt="" loading="lazy">
@@ -1685,12 +1703,16 @@
         <div class="thumb-item" data-time="2745" onclick="seekTo(2745)">
             <img src="images/37_004545_skoric_aircash_primjer.png" alt="" loading="lazy">
         </div>
-        <div class="thumb-item" data-time="3641" onclick="seekTo(3641)">
-            <img src="images/41_010041_skoric_porazimo_amerikance.png" alt="" loading="lazy">
+        <!-- Chapter 6: SVB -->
+        <div class="thumb-separator">6</div>
+        <div class="thumb-item" data-time="2309" onclick="seekTo(2309)">
+            <img src="images/29_003829_skoric_problem_je_banka.png" alt="" loading="lazy">
         </div>
         <div class="thumb-item" data-time="4130" onclick="seekTo(4130)">
             <img src="images/48_010850_sosic_svb_obveznice.png" alt="" loading="lazy">
         </div>
+        <!-- Chapter 7: Dinamit -->
+        <div class="thumb-separator">7</div>
         <div class="thumb-item" data-time="4173" onclick="seekTo(4173)">
             <img src="images/49_010933_sosic_dinamit_temeljima.png" alt="" loading="lazy">
         </div>
@@ -1700,11 +1722,26 @@
         <div class="thumb-item" data-time="4481" onclick="seekTo(4481)">
             <img src="images/52_011441_publika_350m_dinamit.png" alt="" loading="lazy">
         </div>
+        <!-- Chapter 8: Dolarizacija -->
+        <div class="thumb-separator">8</div>
+        <div class="thumb-item" data-time="2013" onclick="seekTo(2013)">
+            <img src="images/25_003333_skreb_dolarizacija_svijeta.png" alt="" loading="lazy">
+        </div>
+        <div class="thumb-item" data-time="2478" onclick="seekTo(2478)">
+            <img src="images/32_004118_skoric_zasto_propao_libra.png" alt="" loading="lazy">
+        </div>
+        <!-- Chapter 9: Banke -->
+        <div class="thumb-separator">9</div>
         <div class="thumb-item" data-time="4579" onclick="seekTo(4579)">
             <img src="images/54_011619_majher_fed_waller_monopol.png" alt="" loading="lazy">
         </div>
         <div class="thumb-item" data-time="4633" onclick="seekTo(4633)">
             <img src="images/56_011713_majher_zasto_banke_ulaze.png" alt="" loading="lazy">
+        </div>
+        <!-- Chapter 10: Zaključak -->
+        <div class="thumb-separator">10</div>
+        <div class="thumb-item" data-time="3641" onclick="seekTo(3641)">
+            <img src="images/41_010041_skoric_porazimo_amerikance.png" alt="" loading="lazy">
         </div>
         <div class="thumb-item" data-time="4768" onclick="seekTo(4768)">
             <img src="images/58_011928_pavlovic_zakljucak.png" alt="" loading="lazy">
@@ -1902,11 +1939,11 @@
 
             if (activeThumb) {
                 activeThumb.classList.add('active');
-                // Scroll active thumb into view within the nav
-                activeThumb.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'nearest'
-                });
+                // Auto-scroll disabled for thumb-nav
+                // activeThumb.scrollIntoView({
+                //     behavior: 'smooth',
+                //     block: 'nearest'
+                // });
             }
         }
 
