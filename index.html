@@ -658,6 +658,85 @@
             color: var(--text-secondary);
         }
 
+        /* Autoplay countdown */
+        .autoplay-countdown {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            background: rgba(74, 158, 255, 0.1);
+            border: 1px solid rgba(74, 158, 255, 0.3);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .autoplay-countdown:hover {
+            background: rgba(74, 158, 255, 0.15);
+            border-color: rgba(74, 158, 255, 0.5);
+        }
+
+        .autoplay-countdown.hidden {
+            display: none;
+        }
+
+        .countdown-circle {
+            position: relative;
+            width: 32px;
+            height: 32px;
+        }
+
+        .countdown-circle svg {
+            transform: rotate(-90deg);
+            width: 32px;
+            height: 32px;
+        }
+
+        .countdown-circle .bg {
+            fill: none;
+            stroke: rgba(74, 158, 255, 0.2);
+            stroke-width: 3;
+        }
+
+        .countdown-circle .progress {
+            fill: none;
+            stroke: var(--accent-blue);
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-dasharray: 88;
+            stroke-dashoffset: 0;
+            transition: stroke-dashoffset 1s linear;
+        }
+
+        .countdown-number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+        }
+
+        .countdown-text {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .countdown-text span {
+            color: var(--accent-blue);
+            font-weight: 500;
+        }
+
+        .countdown-cancel {
+            margin-left: auto;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-decoration: underline;
+        }
+
         /* Screenshot in timeline */
         .timeline-screenshot {
             margin: 1rem 0;
@@ -865,6 +944,34 @@
                 font-size: 0.75rem;
             }
 
+            .autoplay-countdown {
+                margin-top: 0;
+                padding: 0.35rem 0.5rem;
+                gap: 0.5rem;
+            }
+
+            .countdown-circle {
+                width: 24px;
+                height: 24px;
+            }
+
+            .countdown-circle svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .countdown-number {
+                font-size: 0.7rem;
+            }
+
+            .countdown-text {
+                font-size: 0.7rem;
+            }
+
+            .countdown-cancel {
+                font-size: 0.65rem;
+            }
+
             .video-container {
                 padding: 0.5rem;
             }
@@ -953,6 +1060,17 @@
                 <h3>Sada gledate</h3>
                 <div class="current-timestamp" id="currentTime">00:00:00</div>
                 <div class="current-speaker" id="currentSpeaker">Kliknite timestamp za seek</div>
+                <div class="autoplay-countdown" id="autoplayCountdown" onclick="cancelAutoplay()">
+                    <div class="countdown-circle">
+                        <svg viewBox="0 0 32 32">
+                            <circle class="bg" cx="16" cy="16" r="14"></circle>
+                            <circle class="progress" id="countdownProgress" cx="16" cy="16" r="14"></circle>
+                        </svg>
+                        <span class="countdown-number" id="countdownNumber">5</span>
+                    </div>
+                    <div class="countdown-text">Autoplay za <span id="countdownSeconds">5</span>s</div>
+                    <div class="countdown-cancel">Odustani</div>
+                </div>
             </div>
         </div>
     </div>
@@ -1768,6 +1886,61 @@
         let player;
         let playerReady = false;
 
+        // Autoplay countdown variables
+        let autoplayCountdownInterval = null;
+        let autoplaySecondsLeft = 5;
+        const FIRST_FRAME_TIME = 62; // First kadar timestamp in seconds
+
+        // Start autoplay countdown
+        function startAutoplayCountdown() {
+            const countdownEl = document.getElementById('autoplayCountdown');
+            const progressEl = document.getElementById('countdownProgress');
+            const numberEl = document.getElementById('countdownNumber');
+            const secondsEl = document.getElementById('countdownSeconds');
+
+            // Circle circumference: 2 * PI * r = 2 * 3.14159 * 14 ≈ 88
+            const circumference = 88;
+            autoplaySecondsLeft = 5;
+
+            // Update display
+            numberEl.textContent = autoplaySecondsLeft;
+            secondsEl.textContent = autoplaySecondsLeft;
+            progressEl.style.strokeDashoffset = 0;
+
+            autoplayCountdownInterval = setInterval(() => {
+                autoplaySecondsLeft--;
+
+                // Update number display
+                numberEl.textContent = autoplaySecondsLeft;
+                secondsEl.textContent = autoplaySecondsLeft;
+
+                // Update progress circle (animate from 0 to circumference)
+                const offset = circumference * (1 - autoplaySecondsLeft / 5);
+                progressEl.style.strokeDashoffset = offset;
+
+                if (autoplaySecondsLeft <= 0) {
+                    clearInterval(autoplayCountdownInterval);
+                    autoplayCountdownInterval = null;
+                    countdownEl.classList.add('hidden');
+
+                    // Seek to first frame
+                    if (playerReady && player) {
+                        seekTo(FIRST_FRAME_TIME);
+                    }
+                }
+            }, 1000);
+        }
+
+        // Cancel autoplay countdown
+        function cancelAutoplay() {
+            if (autoplayCountdownInterval) {
+                clearInterval(autoplayCountdownInterval);
+                autoplayCountdownInterval = null;
+            }
+            const countdownEl = document.getElementById('autoplayCountdown');
+            countdownEl.classList.add('hidden');
+        }
+
         // Load the IFrame Player API code asynchronously
         const tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
@@ -1796,6 +1969,8 @@
             playerReady = true;
             // Start updating time display
             setInterval(updateTimeDisplay, 500);
+            // Start autoplay countdown
+            startAutoplayCountdown();
         }
 
         function onPlayerStateChange(event) {
@@ -1807,6 +1982,9 @@
 
         // Seek to specific time in seconds
         function seekTo(seconds) {
+            // Cancel any running autoplay countdown
+            cancelAutoplay();
+
             if (playerReady && player) {
                 player.seekTo(seconds, true);
                 player.playVideo();
