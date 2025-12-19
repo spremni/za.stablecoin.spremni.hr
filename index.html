@@ -1824,6 +1824,18 @@
 
                     // Reset auto-scroll tracker to this position
                     lastActiveItemTime = seconds;
+
+                    // Scroll the timeline item into view (after a short delay to let video scroll first)
+                    setTimeout(() => {
+                        const videoContainer = document.getElementById('videoContainer');
+                        const videoHeight = videoContainer ? videoContainer.offsetHeight : 0;
+                        const itemRect = targetItem.getBoundingClientRect();
+                        const scrollTop = window.pageYOffset + itemRect.top - videoHeight - 40;
+                        window.scrollTo({
+                            top: scrollTop,
+                            behavior: 'smooth'
+                        });
+                    }, 100);
                 }
 
                 // Update thumbnail nav active state
@@ -1834,12 +1846,6 @@
                 setTimeout(() => {
                     autoScrollPaused = false;
                 }, 3000);
-
-                // Scroll video container into view
-                document.getElementById('videoContainer').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
             }
         }
 
